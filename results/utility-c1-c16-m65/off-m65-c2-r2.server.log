@@ -1,0 +1,49 @@
+SWE_AB mode=off kill_switch=1 memory_fraction=0.65 model=/models/Qwen3.5-35B-A3B
+SWE_AB command: vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config \{\"mode\":3\,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"\} --cudagraph-capture-sizes 1 2 4 8 16
+[W1003 14:27:55.440934765 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1003 14:28:04.779193511 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+INFO 10-03 14:28:10 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-03 14:28:10 [__init__.py:46] - ascend -> vllm_ascend:register
+INFO 10-03 14:28:10 [__init__.py:58] Loading plugin ascend
+INFO 10-03 14:28:10 [__init__.py:238] Platform plugin ascend is activated
+INFO 10-03 14:28:10 [platform.py:62] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+(APIServer pid=48221) INFO 10-03 14:28:21 [api_utils.py:339] 
+(APIServer pid=48221) INFO 10-03 14:28:21 [api_utils.py:339]        █     █     █▄   ▄█
+(APIServer pid=48221) INFO 10-03 14:28:21 [api_utils.py:339]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.23.0
+(APIServer pid=48221) INFO 10-03 14:28:21 [api_utils.py:339]   █▄█▀ █     █     █     █  model   /models/Qwen3.5-35B-A3B
+(APIServer pid=48221) INFO 10-03 14:28:21 [api_utils.py:339]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=48221) INFO 10-03 14:28:21 [api_utils.py:339] 
+(APIServer pid=48221) INFO 10-03 14:28:22 [api_utils.py:273] non-default args: {'model_tag': '/models/Qwen3.5-35B-A3B', 'host': '127.0.0.1', 'port': 18180, 'model': '/models/Qwen3.5-35B-A3B', 'dtype': 'bfloat16', 'max_model_len': 262144, 'served_model_name': ['qwen3.5-35b-a3b'], 'distributed_executor_backend': 'mp', 'tensor_parallel_size': 2, 'enable_expert_parallel': True, 'disable_custom_all_reduce': True, 'block_size': 128, 'gpu_memory_utilization': 0.65, 'enable_prefix_caching': False, 'max_num_batched_tokens': 8192, 'max_num_seqs': 16, 'enable_chunked_prefill': True, 'async_scheduling': False, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16], 'compilation_config': {'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'vllm_ascend.compilation.compiler_interface.AscendCompiler', 'custom_ops': [], 'ir_enable_torch_wrap': None, 'splitting_ops': None, 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': None, 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': None, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}, 'additional_config': {'utility_victim_mod': {}, 'utility_victim_mod_provenance': {'admission_status': 'step2_cpu_only_native_equivalent', 'evidence_ids': ['LOCAL-UV-001', 'LOCAL-UV-002', 'LOCAL-UV-003'], 'performance_verified': False, 'source_ascend': '76d8939d7e21d17a295adf99e9dda17bde5a88cc', 'source_core': '1aa7cd10b7b16e82fdb29fcc47d3a3cd93bd01dc', 'source_core_role': 'historical_context_not_algorithm_source'}}}
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_HUST_UTILITY_VICTIM_ENABLE
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_ASCEND_BALANCE_SCHEDULING
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_HUST_UTILITY_VICTIM_BACKEND
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_HUST_UTILITY_VICTIM_EVIDENCE
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_ECPA_EVIDENCE_SINK
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_ECPA_EVIDENCE_STRICT
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_ECPA_PLAN_ID
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_ECPA_LAUNCH_ID
+(APIServer pid=48221) WARNING 10-03 14:28:22 [envs.py:2088] Unknown vLLM environment variable detected: VLLM_HUST_EXT_EVIDENCE_PATH
+(APIServer pid=48221) INFO 10-03 14:28:22 [model.py:611] Resolved architecture: Qwen3_5MoeForConditionalGeneration
+(APIServer pid=48221) INFO 10-03 14:28:22 [model.py:1745] Using max model len 262144
+(APIServer pid=48221) INFO 10-03 14:28:22 [scheduler.py:239] Chunked prefill is enabled with max_num_batched_tokens=8192.
+(APIServer pid=48221) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(APIServer pid=48221) INFO 10-03 14:28:22 [patch_mamba_config.py:104] Setting attention block size to 2048 tokens to ensure that attention page size is >= mamba page size.
+(APIServer pid=48221) INFO 10-03 14:28:22 [patch_mamba_config.py:119] Padding mamba page size by 1.16% to ensure that mamba page size and attention page size are exactly equal.
+(APIServer pid=48221) INFO 10-03 14:28:22 [vllm.py:999] Asynchronous scheduling is disabled.
+(APIServer pid=48221) INFO 10-03 14:28:22 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=48221) INFO 10-03 14:28:22 [utils.py:174] No quantization signature detected from model files for "/models/Qwen3.5-35B-A3B". The model will be loaded as float. To force a quantization method, pass "--quantization <method>" explicitly.
+(APIServer pid=48221) WARNING 10-03 14:28:22 [platform.py:1067] GPU-specific parameter is not supported on Ascend. parameter=disable_cascade_attn, value=True, action: resetting to False.
+(APIServer pid=48221) INFO 10-03 14:28:22 [platform.py:1277] The timeout interval of the HCCL operator is 1836s. Timeout in seconds for execute_model RPC calls in multiprocessing must be greater than 1836s, Set VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=3000
+(APIServer pid=48221) INFO 10-03 14:28:22 [ascend_config.py:893] Dynamic EPLB is False
+(APIServer pid=48221) INFO 10-03 14:28:22 [ascend_config.py:894] The number of redundant experts is 0
+(APIServer pid=48221) INFO 10-03 14:28:22 [ascend_config.py:360] AscendConfig.enable_balance_scheduling falls back to environment variable VLLM_ASCEND_BALANCE_SCHEDULING with value False. Please use additional_config.enable_balance_scheduling instead, because VLLM_ASCEND_BALANCE_SCHEDULING will be removed in the next release.
+(APIServer pid=48221) INFO 10-03 14:28:22 [platform.py:790] Set PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+(APIServer pid=48221) INFO 10-03 14:28:22 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=48221) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[W1003 14:28:38.692431760 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+INFO 10-03 14:28:43 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-03 14:28:43 [__init__.py:46] - ascend -> vllm_ascend:register
+INFO 10-03 14:28:43 [__init__.py:58] Loading plugin ascend
+INFO 10-03 14:28:43 [__init__.py:238] Platform plugin ascend is activated
+INFO 10-03 14:28:43 [platform.py:62] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.

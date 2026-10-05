@@ -1,0 +1,83 @@
+{
+  "name": "vllm-hust-utility-victim",
+  "version": "0.1.0.dev2",
+  "direct_url": null,
+  "files": [
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/INSTALLER",
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/METADATA",
+      "sha256": "8cd8d5fe79e760e1f436dab2c778e2f0d378dfd1b8a039f58facd6a5c35f76c4"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/RECORD",
+      "sha256": "17874bc623f5eb27f847198890669ef49faea65288113abd0425884c2ce8511a"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/REQUESTED",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/WHEEL",
+      "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/entry_points.txt",
+      "sha256": "f2b7028a9c52524b35fcf540abb0bd970a2c6d31260d2cd722d7fc9955d3b00e"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/licenses/LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/licenses/NOTICE",
+      "sha256": "0aa019d1dfa2e5ca3a1c4258b0b580b9a743277e06643346656422000837bedf"
+    },
+    {
+      "path": "vllm_hust_utility_victim-0.1.0.dev2.dist-info/top_level.txt",
+      "sha256": "09518382f0180e3c2b998d3b25abf0e202a6711a67d212edfd4e525c36fc19b3"
+    },
+    {
+      "path": "vllm_hust_utility_victim/__init__.py",
+      "sha256": "6327d7cce3c06db5d102548374eeb970eab1dbd0a371cb8d6310572878aa31ee"
+    },
+    {
+      "path": "vllm_hust_utility_victim/_version.py",
+      "sha256": "409814eee746bd71956743b91996eacbbc9154be23fe1d39db557fb6a8f28bcd"
+    },
+    {
+      "path": "vllm_hust_utility_victim/core_adapter.py",
+      "sha256": "749651baa7f32e26853983f7ad1979e4d2ae602517250a0049cd9e38f877ec4c"
+    },
+    {
+      "path": "vllm_hust_utility_victim/core_contract.json",
+      "sha256": "13a32ba0a6e8db6e79c8d159ce8e23948b4e63eb11d48cd447bb92a1d4015afa"
+    },
+    {
+      "path": "vllm_hust_utility_victim/historical.py",
+      "sha256": "3b54ac8f2ea1e5de02f78530f34b22b68abe1a4cf61be7ebe9eb1f60d62d2f9d"
+    },
+    {
+      "path": "vllm_hust_utility_victim/host_fingerprints.json",
+      "sha256": "f216fd5c5580c4a4c3e984655c9747f44c52ed88e40c980e8665b3b1ed24747e"
+    },
+    {
+      "path": "vllm_hust_utility_victim/manifests/__init__.py",
+      "sha256": "37b33cbec82699240eb430d5fda92148f92b441548c22035c8ab4b7fd833c487"
+    },
+    {
+      "path": "vllm_hust_utility_victim/manifests/vllm-hust-extension-v0.2.json",
+      "sha256": "f9fe62d2c6af9d69e88e4c15f3cc185d91c4ea5d9a4f3327a151c77e98ef2b5f"
+    },
+    {
+      "path": "vllm_hust_utility_victim/plugin.py",
+      "sha256": "d8d8bec906ed37a50bd631473f37ab17ea8a45ac88d05338e5adad69bdc5263f"
+    },
+    {
+      "path": "vllm_hust_utility_victim/selector.py",
+      "sha256": "df20704282b65ab98d1a3be9d5c89d2005e26713b43b8707387827020bd4c2c7"
+    }
+  ]
+}

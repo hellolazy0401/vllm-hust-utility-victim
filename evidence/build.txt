@@ -1,0 +1,160 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src\vllm_hust_utility_victim.egg-info\PKG-INFO
+writing dependency_links to src\vllm_hust_utility_victim.egg-info\dependency_links.txt
+writing entry points to src\vllm_hust_utility_victim.egg-info\entry_points.txt
+writing requirements to src\vllm_hust_utility_victim.egg-info\requires.txt
+writing top-level names to src\vllm_hust_utility_victim.egg-info\top_level.txt
+reading manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'evidence'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\vllm_hust_utility_victim.egg-info\PKG-INFO
+writing dependency_links to src\vllm_hust_utility_victim.egg-info\dependency_links.txt
+writing entry points to src\vllm_hust_utility_victim.egg-info\entry_points.txt
+writing requirements to src\vllm_hust_utility_victim.egg-info\requires.txt
+writing top-level names to src\vllm_hust_utility_victim.egg-info\top_level.txt
+reading manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'evidence'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+running check
+creating vllm_hust_utility_victim-0.1.0.dev0
+creating vllm_hust_utility_victim-0.1.0.dev0\docs
+creating vllm_hust_utility_victim-0.1.0.dev0\evidence
+creating vllm_hust_utility_victim-0.1.0.dev0\scripts
+creating vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+creating vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+creating vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim\manifests
+creating vllm_hust_utility_victim-0.1.0.dev0\tests
+copying files to vllm_hust_utility_victim-0.1.0.dev0...
+copying LICENSE -> vllm_hust_utility_victim-0.1.0.dev0
+copying MANIFEST.in -> vllm_hust_utility_victim-0.1.0.dev0
+copying NOTICE -> vllm_hust_utility_victim-0.1.0.dev0
+copying README.md -> vllm_hust_utility_victim-0.1.0.dev0
+copying pyproject.toml -> vllm_hust_utility_victim-0.1.0.dev0
+copying docs\MAPPING.md -> vllm_hust_utility_victim-0.1.0.dev0\docs
+copying docs\SELECTION.md -> vllm_hust_utility_victim-0.1.0.dev0\docs
+copying docs\VALIDATION.md -> vllm_hust_utility_victim-0.1.0.dev0\docs
+copying docs\mapping.csv -> vllm_hust_utility_victim-0.1.0.dev0\docs
+copying docs\mapping.json -> vllm_hust_utility_victim-0.1.0.dev0\docs
+copying evidence\ascend-pr39-victim_selector.py -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\bidkv-reference.json -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\bidkv-selector-reference.py -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\build.txt -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\extension-manager-pyproject.toml -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\extension-manager-reference.json -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\pytest.txt -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\ruff.txt -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\vllm-ascend-hust-legacy-20260831-pr-39-files.json -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\vllm-ascend-hust-legacy-20260831-pr-39.json -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\vllm-hust-legacy-20260831-pr-171-files.json -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\vllm-hust-legacy-20260831-pr-171.json -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying evidence\wheel-install.txt -> vllm_hust_utility_victim-0.1.0.dev0\evidence
+copying scripts\audit_sources.py -> vllm_hust_utility_victim-0.1.0.dev0\scripts
+copying scripts\verify_wheel.py -> vllm_hust_utility_victim-0.1.0.dev0\scripts
+copying src\vllm_hust_utility_victim\__init__.py -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\_version.py -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\historical.py -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\host_fingerprints.json -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\plugin.py -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\selector.py -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim.egg-info\PKG-INFO -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+copying src\vllm_hust_utility_victim.egg-info\SOURCES.txt -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+copying src\vllm_hust_utility_victim.egg-info\dependency_links.txt -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+copying src\vllm_hust_utility_victim.egg-info\entry_points.txt -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+copying src\vllm_hust_utility_victim.egg-info\requires.txt -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+copying src\vllm_hust_utility_victim.egg-info\top_level.txt -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim.egg-info
+copying src\vllm_hust_utility_victim\manifests\__init__.py -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim\manifests
+copying src\vllm_hust_utility_victim\manifests\vllm-hust-extension-v0.2.json -> vllm_hust_utility_victim-0.1.0.dev0\src\vllm_hust_utility_victim\manifests
+copying tests\conftest.py -> vllm_hust_utility_victim-0.1.0.dev0\tests
+copying tests\test_activation.py -> vllm_hust_utility_victim-0.1.0.dev0\tests
+copying tests\test_manager.py -> vllm_hust_utility_victim-0.1.0.dev0\tests
+copying tests\test_manifest.py -> vllm_hust_utility_victim-0.1.0.dev0\tests
+copying tests\test_selector.py -> vllm_hust_utility_victim-0.1.0.dev0\tests
+Writing vllm_hust_utility_victim-0.1.0.dev0\setup.cfg
+Creating tar archive
+removing 'vllm_hust_utility_victim-0.1.0.dev0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\vllm_hust_utility_victim.egg-info\PKG-INFO
+writing dependency_links to src\vllm_hust_utility_victim.egg-info\dependency_links.txt
+writing entry points to src\vllm_hust_utility_victim.egg-info\entry_points.txt
+writing requirements to src\vllm_hust_utility_victim.egg-info\requires.txt
+writing top-level names to src\vllm_hust_utility_victim.egg-info\top_level.txt
+reading manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'evidence'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\historical.py -> build\lib\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\plugin.py -> build\lib\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\selector.py -> build\lib\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\_version.py -> build\lib\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\__init__.py -> build\lib\vllm_hust_utility_victim
+creating build\lib\vllm_hust_utility_victim\manifests
+copying src\vllm_hust_utility_victim\manifests\__init__.py -> build\lib\vllm_hust_utility_victim\manifests
+running egg_info
+writing src\vllm_hust_utility_victim.egg-info\PKG-INFO
+writing dependency_links to src\vllm_hust_utility_victim.egg-info\dependency_links.txt
+writing entry points to src\vllm_hust_utility_victim.egg-info\entry_points.txt
+writing requirements to src\vllm_hust_utility_victim.egg-info\requires.txt
+writing top-level names to src\vllm_hust_utility_victim.egg-info\top_level.txt
+reading manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'evidence'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\vllm_hust_utility_victim.egg-info\SOURCES.txt'
+copying src\vllm_hust_utility_victim\host_fingerprints.json -> build\lib\vllm_hust_utility_victim
+copying src\vllm_hust_utility_victim\manifests\vllm-hust-extension-v0.2.json -> build\lib\vllm_hust_utility_victim\manifests
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\vllm_hust_utility_victim
+copying build\lib\vllm_hust_utility_victim\historical.py -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim
+copying build\lib\vllm_hust_utility_victim\host_fingerprints.json -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim
+creating build\bdist.win-amd64\wheel\vllm_hust_utility_victim\manifests
+copying build\lib\vllm_hust_utility_victim\manifests\vllm-hust-extension-v0.2.json -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim\manifests
+copying build\lib\vllm_hust_utility_victim\manifests\__init__.py -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim\manifests
+copying build\lib\vllm_hust_utility_victim\plugin.py -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim
+copying build\lib\vllm_hust_utility_victim\selector.py -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim
+copying build\lib\vllm_hust_utility_victim\_version.py -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim
+copying build\lib\vllm_hust_utility_victim\__init__.py -> build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim
+running install_egg_info
+Copying src\vllm_hust_utility_victim.egg-info to build\bdist.win-amd64\wheel\.\vllm_hust_utility_victim-0.1.0.dev0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\vllm_hust_utility_victim-0.1.0.dev0.dist-info\WHEEL
+creating 'D:\\Desktop\\mining\\vllm-hust\\vllm-hust-utility-victim\\dist\\.tmp-sq98lis_\\vllm_hust_utility_victim-0.1.0.dev0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'vllm_hust_utility_victim/__init__.py'
+adding 'vllm_hust_utility_victim/_version.py'
+adding 'vllm_hust_utility_victim/historical.py'
+adding 'vllm_hust_utility_victim/host_fingerprints.json'
+adding 'vllm_hust_utility_victim/plugin.py'
+adding 'vllm_hust_utility_victim/selector.py'
+adding 'vllm_hust_utility_victim/manifests/__init__.py'
+adding 'vllm_hust_utility_victim/manifests/vllm-hust-extension-v0.2.json'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/licenses/LICENSE'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/licenses/NOTICE'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/METADATA'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/WHEEL'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/entry_points.txt'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/top_level.txt'
+adding 'vllm_hust_utility_victim-0.1.0.dev0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built vllm_hust_utility_victim-0.1.0.dev0.tar.gz and vllm_hust_utility_victim-0.1.0.dev0-py3-none-any.whl

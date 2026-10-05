@@ -1,0 +1,5 @@
+[vllm.general_plugins]
+utility_victim = vllm_hust_utility_victim.plugin:register
+
+[vllm_hust.extension_bundles]
+org.vllm-hust.utility-victim = vllm_hust_utility_victim.manifests

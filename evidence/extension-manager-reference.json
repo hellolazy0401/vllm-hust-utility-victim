@@ -1,0 +1,190 @@
+{
+  "sha": "ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+  "node_id": "C_kwDOUJkas9oAKGZmMTQ0YjQ2OWFkOGNmN2ExMTA5NjEwYjNhNmE0ZTM1MjhiYzQwZWU",
+  "commit": {
+    "author": {
+      "name": "Shuhao Zhang (Tony)",
+      "email": "shuhao_zhang@hust.edu.cn",
+      "date": "2026-09-30T13:25:44Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-30T13:25:44Z"
+    },
+    "message": "Merge pull request #24 from vLLM-HUST/codex/ecpa-provider-isolation\n\nfix: isolate external provider resolution",
+    "tree": {
+      "sha": "a83efd59f5331e4fe89860d61bb600e35bd43ee3",
+      "url": "https://api.github.com/repos/vLLM-HUST/extension-manager/git/trees/a83efd59f5331e4fe89860d61bb600e35bd43ee3"
+    },
+    "url": "https://api.github.com/repos/vLLM-HUST/extension-manager/git/commits/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqvQ3YCRC1aQ7uu5UhlAAAOx0QAIIZJAPCr5Qfl+gFV94I29sg\nkFXeiLK4S2s8NhkJM1ZCt83FZhSOznBEEkoBnstHpKnrfE5XQ8v5u0iWJ/cbPFhB\n7gDuQqBZOE4JSAoAToLIqNeZW4EwLNu2FWAiiBTK19WdV6r0HifSnpex45r5BPRc\nz1W9YvaTPXmpVZ/gXdbub9JCjVkVa9gWe/bYEsewVgYsWedzaRFkl/wgwJS9gvZE\nab/jZP6ozIiOI0bREl3C8uRC0Bf2EaN+VYshTztuAM1fec4PV0D65/GP3xyEUkfC\nUfvbo6HG5GMuGxk7UK7sYGMe8AvSK8ljNdX0EV9sQerUtqgypZp3LMCmhEUOxV64\nhmABSudl+wo4skyXGRrxnpPW/zXlwec12T57c3Z1RyuACVcaj5mFWfn/R/MzKFDX\nhoXuK29h7GdhSs0R5vNxX4drYAAbrHOUBYs9DBBqTyrNGmnVITgvZ07vJwKS0Foh\nbMU4xeIq9kPIkr4haagUeYvwh7bWDi4hSP8achveB1G9HpmnfVhGfh0RQLztYkt+\ngk6S1vyCcTB+swVujaDh+g1qHppk779bDgE5tkhbaQU7nweDOl0b8uTiJWJaP2ut\nsfCU9C+kXsoyN5aR/OvcJUTtiLMNWCNTmVIwqZch2dQQYEmg1OYiNYC3dRHqrz0l\n4dF757EG2chn/NFaooi8\n=V8Yk\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree a83efd59f5331e4fe89860d61bb600e35bd43ee3\nparent 00c9b336388836cc1eb4a82035ccfcda425ccd3f\nparent b6f78e8e08764ec5603b924c2e9913cf7fa013b3\nauthor Shuhao Zhang (Tony) <shuhao_zhang@hust.edu.cn> 1790774744 +0800\ncommitter GitHub <noreply@github.com> 1790774744 +0800\n\nMerge pull request #24 from vLLM-HUST/codex/ecpa-provider-isolation\n\nfix: isolate external provider resolution",
+      "verified_at": "2026-09-30T13:25:44Z"
+    }
+  },
+  "url": "https://api.github.com/repos/vLLM-HUST/extension-manager/commits/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+  "html_url": "https://github.com/vLLM-HUST/extension-manager/commit/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+  "comments_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/commits/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/comments",
+  "author": {
+    "login": "ShuhaoZhangTony",
+    "id": 5267690,
+    "node_id": "MDQ6VXNlcjUyNjc2OTA=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5267690?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ShuhaoZhangTony",
+    "html_url": "https://github.com/ShuhaoZhangTony",
+    "followers_url": "https://api.github.com/users/ShuhaoZhangTony/followers",
+    "following_url": "https://api.github.com/users/ShuhaoZhangTony/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ShuhaoZhangTony/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ShuhaoZhangTony/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ShuhaoZhangTony/subscriptions",
+    "organizations_url": "https://api.github.com/users/ShuhaoZhangTony/orgs",
+    "repos_url": "https://api.github.com/users/ShuhaoZhangTony/repos",
+    "events_url": "https://api.github.com/users/ShuhaoZhangTony/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ShuhaoZhangTony/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "00c9b336388836cc1eb4a82035ccfcda425ccd3f",
+      "url": "https://api.github.com/repos/vLLM-HUST/extension-manager/commits/00c9b336388836cc1eb4a82035ccfcda425ccd3f",
+      "html_url": "https://github.com/vLLM-HUST/extension-manager/commit/00c9b336388836cc1eb4a82035ccfcda425ccd3f"
+    },
+    {
+      "sha": "b6f78e8e08764ec5603b924c2e9913cf7fa013b3",
+      "url": "https://api.github.com/repos/vLLM-HUST/extension-manager/commits/b6f78e8e08764ec5603b924c2e9913cf7fa013b3",
+      "html_url": "https://github.com/vLLM-HUST/extension-manager/commit/b6f78e8e08764ec5603b924c2e9913cf7fa013b3"
+    }
+  ],
+  "stats": {
+    "total": 254,
+    "additions": 238,
+    "deletions": 16
+  },
+  "files": [
+    {
+      "sha": "1321b8937ebd23e43b2a29454c52c6a88c8e0531",
+      "filename": ".planning/ecpa-recovery-20260928/findings.md",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 0,
+      "changes": 15,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/.planning%2Fecpa-recovery-20260928%2Ffindings.md",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/.planning%2Fecpa-recovery-20260928%2Ffindings.md",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/.planning%2Fecpa-recovery-20260928%2Ffindings.md?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -98,3 +98,18 @@\n - A clean-wheel mixed installation of CLM and Pegaflow reproduced the boundary:\n   CLM remained visible while Pegaflow was reported with its cross-distribution\n   activation-entry-point error.\n+\n+# Provider-isolation re-audit finding (2026-09-30)\n+\n+- KV Tiering PR #3 publishes a third-party Provider whose factory import requires\n+  `vllm`. In a clean Manager environment, eager loading of every Provider made\n+  that missing optional host dependency crash checks for unrelated Bundles.\n+- Provider lookup now loads only the selected external factory. A mixed\n+  clean-wheel install proved Prefix Router check still works while KV Tiering is\n+  reported incompatible with a precise `ModuleNotFoundError` diagnostic.\n+- The Mod still owns its import boundary, ECPA 0.3 manifest migration, protocol\n+  and resource declarations, and native-host validation.\n+- Pegaflow main moved its activation entry-point record into the Provider wheel,\n+  but the target `pegaflow.vllm_plugin` module is still absent from that wheel.\n+  Static target ownership validation now rejects this dangling record without\n+  importing or executing plugin code."
+    },
+    {
+      "sha": "82a3dea2a000965015ca0fa44134e007dbf169e7",
+      "filename": ".planning/ecpa-recovery-20260928/progress.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/.planning%2Fecpa-recovery-20260928%2Fprogress.md",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/.planning%2Fecpa-recovery-20260928%2Fprogress.md",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/.planning%2Fecpa-recovery-20260928%2Fprogress.md?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -24,3 +24,7 @@\n - [x] Routed confirmed MOD packaging gaps to repository issues, reusing existing\n   pluginization issues and using the organization tracker where Tricard disables\n   repository issues.\n+- [x] Re-audited the tracked MOD repositories and isolated selected external\n+  Provider loading so one broken Provider cannot deny unrelated ECPA operations;\n+  also reject activation entry points whose target module is absent from the\n+  declaring wheel/editable distribution."
+    },
+    {
+      "sha": "84fcc1d882ff83bebd6dc497aeb9a97ed2971b65",
+      "filename": "docs/architecture.md",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 1,
+      "changes": 9,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/docs%2Farchitecture.md",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/docs%2Farchitecture.md",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/docs%2Farchitecture.md?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -19,6 +19,11 @@ registrations use `vllm_hust.extension_bundles`. A Provider may delegate to an\n official `vllm.*` entry point, but vLLM-HUST does not invent new entry-point\n groups in the upstream namespace.\n \n+Provider resolution loads only the factory selected by the Bundle. A broken or\n+host-dependent third-party Provider therefore cannot break checks and plans for\n+unrelated Bundles. Failure to import the selected Provider is reported as an\n+explicit incompatibility or planning error, without a Python traceback.\n+\n Inventory discovery isolates validation failures by Bundle id so a broken,\n disabled distribution cannot deny visibility into every other installed MOD.\n The invalid registration remains visible as a diagnostic. This tolerance is\n@@ -27,7 +32,9 @@ resolve their selected Bundle set strictly and fail closed.\n \n For vLLM in-process plugins, a manifest may declare installed entry points in\n `vllm.general_plugins` and `vllm.platform_plugins`. Discovery verifies that the\n-declaring distribution actually publishes each entry point. At launch, Core\n+declaring distribution publishes both each entry-point record and its target\n+module. This check uses wheel/editable file metadata and never imports plugin\n+code. At launch, Core\n merges their names with the user's `VLLM_PLUGINS`, retains `ascend`, rejects\n cross-extension name ownership conflicts, and computes a stable order. This is\n launch intent, not evidence that plugin code ran; only a process-owned observer"
+    },
+    {
+      "sha": "db2dcd496d9f038b8786aad2a3076331cf641919",
+      "filename": "docs/support-matrix.md",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 0,
+      "changes": 14,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/docs%2Fsupport-matrix.md",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/docs%2Fsupport-matrix.md",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/docs%2Fsupport-matrix.md?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -62,6 +62,20 @@ is disabled). Existing pluginization issues track `vllm-hust-knorm#1`,\n This audit is packaging and contract evidence only. It is not native NPU,\n functional-correctness, runtime-effectiveness, or performance evidence.\n \n+### Re-audit update (2026-09-30)\n+\n+| Candidate | New evidence | Remaining owner gate |\n+| --- | --- | --- |\n+| KNorm PR #4 (`b9429de`) | Clean wheel and ECPA list/inspect/check/plan/render passed; 78 tests passed and one skipped. | Migrate manifest 0.2 to 0.3, declare the installed general-plugin activation entry point and resource conflicts, then resolve worker synchronization and native qualification. |\n+| KV Tiering PR #3 (`7ba646a`) | Wheel, list, and inspect passed. | Provider import executes a hard `vllm` import; clean tests also lack declared `torch`, `numpy`, and `vllm`. Add import isolation/dependencies/CI and a 0.3 protocol/resource contract. |\n+| Prefix Router PR #2 (`2594ae6`) | Clean wheel and ECPA list/inspect/check/plan/render passed; 49 tests passed. | It truthfully remains an external, user-owned, `import_only` service. Add a 0.3 service/resource contract without transferring operator lifecycle to ECPA. |\n+| Pegaflow main (`64ef9d0`) | Provider wheel builds, but its activation entry point targets `pegaflow.vllm_plugin`, which is absent from that wheel. | Package the implementation in the declaring distribution or move Bundle ownership; metadata duplication alone is invalid. |\n+\n+ADM, Quality Bounded Inference, Tricard CLM, Request Lifecycle Profiler, and\n+SliceGPT still have no packaged ECPA Bundle. Their existing owner issues were\n+updated with the exact audited main commits. No native NPU or performance run\n+was performed in this re-audit.\n+\n ## Rollback ownership\n \n - In-process vLLM policies and connectors roll back on the next vLLM process"
+    },
+    {
+      "sha": "c16d256faa129e71501a1c702bf3da5ef224cd78",
+      "filename": "src/vllm_hust_ext/discovery.py",
+      "status": "modified",
+      "additions": 71,
+      "deletions": 0,
+      "changes": 71,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/src%2Fvllm_hust_ext%2Fdiscovery.py",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/src%2Fvllm_hust_ext%2Fdiscovery.py",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/src%2Fvllm_hust_ext%2Fdiscovery.py?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -115,6 +115,58 @@ def _is_editable(entry_point: EntryPoint) -> bool:\n     return direct_url.get(\"dir_info\", {}).get(\"editable\") is True\n \n \n+def _entry_point_target_is_packaged(entry_point: EntryPoint) -> bool:\n+    \"\"\"Check entry-point module ownership without importing third-party code.\"\"\"\n+\n+    distribution = entry_point.dist\n+    if distribution is None:\n+        return False\n+    module = entry_point.value.partition(\":\")[0].strip()\n+    if not _MODULE_PATH.fullmatch(module):\n+        return False\n+    module_path = PurePosixPath(*module.split(\".\"))\n+\n+    def matches(path: PurePosixPath) -> bool:\n+        if path == module_path.with_suffix(\".py\"):\n+            return True\n+        if path == module_path / \"__init__.py\":\n+            return True\n+        return (\n+            path.parent == module_path.parent\n+            and path.name.startswith(f\"{module_path.name}.\")\n+            and path.suffix.lower() in {\".pyd\", \".so\"}\n+        )\n+\n+    if any(matches(PurePosixPath(str(path))) for path in distribution.files or ()):\n+        return True\n+    direct_url_text = distribution.read_text(\"direct_url.json\")\n+    if not direct_url_text:\n+        return False\n+    try:\n+        direct_url = json.loads(direct_url_text)\n+    except json.JSONDecodeError as error:\n+        raise DiscoveryError(\"editable direct_url.json is invalid\") from error\n+    parsed = urlparse(direct_url.get(\"url\", \"\"))\n+    if (\n+        direct_url.get(\"dir_info\", {}).get(\"editable\") is not True\n+        or parsed.scheme != \"file\"\n+        or parsed.netloc not in (\"\", \"localhost\")\n+    ):\n+        return False\n+    path = unquote(parsed.path)\n+    if os.name == \"nt\" and re.match(r\"^/[A-Za-z]:\", path):\n+        path = path[1:]\n+    root = Path(path)\n+    return any(\n+        candidate.is_file()\n+        for source_root in (root, root / \"src\")\n+        for candidate in (\n+            source_root / module_path.with_suffix(\".py\"),\n+            source_root / module_path / \"__init__.py\",\n+        )\n+    )\n+\n+\n def discover_bundles(\n     selected: Iterable[str] | None = None,\n     *,\n@@ -213,6 +265,25 @@ def discover_bundles(\n                 f\"{bundle_id!r} declares uninstalled activation entry points: \"\n                 f\"{rendered}\"\n             )\n+        dangling_entry_points = [\n+            entry_point\n+            for entry_point in related\n+            if (entry_point.group, entry_point.name) in declared\n+            and not _entry_point_target_is_packaged(entry_point)\n+        ]\n+        if dangling_entry_points:\n+            rendered = [\n+                f\"{entry_point.group}:{entry_point.name} -> \"\n+                f\"{entry_point.value.partition(':')[0]}\"\n+                for entry_point in sorted(\n+                    dangling_entry_points,\n+                    key=lambda item: (item.group, item.name),\n+                )\n+            ]\n+            raise DiscoveryError(\n+                f\"{bundle_id!r} declares activation entry-point targets not \"\n+                f\"packaged by its distribution: {rendered}\"\n+            )\n         loaded[bundle_id] = InstalledBundle(\n             bundle_id,\n             name,"
+    },
+    {
+      "sha": "d73f0707158d012bebf5cdcc50463a832898ca53",
+      "filename": "src/vllm_hust_ext/providers/__init__.py",
+      "status": "modified",
+      "additions": 43,
+      "deletions": 14,
+      "changes": 57,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/src%2Fvllm_hust_ext%2Fproviders%2F__init__.py",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/src%2Fvllm_hust_ext%2Fproviders%2F__init__.py",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/src%2Fvllm_hust_ext%2Fproviders%2F__init__.py?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -2,7 +2,8 @@\n \n from __future__ import annotations\n \n-from importlib.metadata import entry_points\n+from importlib.metadata import EntryPoint, entry_points\n+from typing import cast\n \n from vllm_hust_ext.providers.base import HostProvider\n from vllm_hust_ext.providers.mooncake import MooncakeProvider\n@@ -13,30 +14,58 @@\n ENTRY_POINT_GROUP = \"vllm_hust_ext.providers\"\n \n \n-def providers(*, include_external: bool = True) -> dict[str, HostProvider]:\n-    result: dict[str, HostProvider] = {\n+def _builtin_providers() -> dict[str, HostProvider]:\n+    return {\n         \"vllm\": VllmProvider(),\n         \"mooncake\": MooncakeProvider(),\n         \"production-stack\": ProductionStackProvider(),\n         \"stateaxis\": StateAxisProvider(),\n     }\n+\n+\n+def _load_external_provider(entry_point: EntryPoint) -> HostProvider:\n+    name = entry_point.name\n+    try:\n+        provider = cast(HostProvider, entry_point.load()())\n+    except Exception as error:\n+        raise ValueError(\n+            f\"host provider {name!r} failed to load: {type(error).__name__}: {error}\"\n+        ) from error\n+    if provider.name != name:\n+        raise ValueError(f\"provider entry point {name!r} returned {provider.name!r}\")\n+    return provider\n+\n+\n+def providers(*, include_external: bool = True) -> dict[str, HostProvider]:\n+    result = _builtin_providers()\n     if include_external:\n         for entry_point in entry_points(group=ENTRY_POINT_GROUP):\n             if entry_point.name in result:\n                 raise ValueError(f\"duplicate host provider: {entry_point.name}\")\n-            provider = entry_point.load()()\n-            if provider.name != entry_point.name:\n-                raise ValueError(\n-                    f\"provider entry point {entry_point.name!r} returned \"\n-                    f\"{provider.name!r}\"\n-                )\n+            provider = _load_external_provider(entry_point)\n             result[provider.name] = provider\n     return result\n \n \n def provider_for(name: str, *, include_external: bool = True) -> HostProvider:\n-    available = providers(include_external=include_external)\n-    try:\n-        return available[name]\n-    except KeyError as error:\n-        raise ValueError(f\"unknown host provider: {name}\") from error\n+    builtins = _builtin_providers()\n+    if not include_external:\n+        try:\n+            return builtins[name]\n+        except KeyError as error:\n+            raise ValueError(f\"unknown host provider: {name}\") from error\n+\n+    matches = tuple(\n+        entry_point\n+        for entry_point in entry_points(group=ENTRY_POINT_GROUP)\n+        if entry_point.name == name\n+    )\n+    if name in builtins:\n+        if matches:\n+            raise ValueError(f\"duplicate host provider: {name}\")\n+        return builtins[name]\n+    if len(matches) > 1:\n+        raise ValueError(f\"duplicate host provider: {name}\")\n+    if not matches:\n+        raise ValueError(f\"unknown host provider: {name}\")\n+    return _load_external_provider(matches[0])"
+    },
+    {
+      "sha": "47c77e5c6b99db4cd283e736db8c8ea214056f9d",
+      "filename": "tests/test_discovery.py",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 1,
+      "changes": 42,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/tests%2Ftest_discovery.py",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/tests%2Ftest_discovery.py",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/tests%2Ftest_discovery.py?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -1,5 +1,6 @@\n from __future__ import annotations\n \n+from pathlib import PurePosixPath\n from types import SimpleNamespace\n \n import pytest\n@@ -12,10 +13,17 @@ def test_discovery_knows_the_03_manifest_filename() -> None:\n \n \n class Distribution:\n-    def __init__(self, name: str, *, editable: bool) -> None:\n+    def __init__(\n+        self,\n+        name: str,\n+        *,\n+        editable: bool,\n+        files: tuple[PurePosixPath, ...] = (),\n+    ) -> None:\n         self.metadata = {\"Name\": name}\n         self.version = \"1.0\"\n         self._editable = editable\n+        self.files = files\n \n     def read_text(self, name: str) -> str | None:\n         if name != \"direct_url.json\":\n@@ -111,8 +119,10 @@ def test_declared_activation_entry_point_matches_distribution_metadata(\n     installed = SimpleNamespace(\n         group=declared.group,\n         name=declared.name,\n+        value=\"example.plugin:register\",\n         dist=distribution,\n     )\n+    distribution.files = (PurePosixPath(\"example/plugin.py\"),)\n     monkeypatch.setattr(discovery, \"_manifest_path\", lambda _item: manifest_path)\n     monkeypatch.setattr(\n         discovery,\n@@ -130,6 +140,36 @@ def test_declared_activation_entry_point_matches_distribution_metadata(\n     assert bundles[0].entry_points == (installed,)\n \n \n+def test_declared_activation_entry_point_target_must_be_packaged(\n+    monkeypatch: pytest.MonkeyPatch, tmp_path\n+) -> None:\n+    manifest_path = tmp_path / \"manifest.json\"\n+    manifest_path.write_text(\"descriptor\")\n+    distribution = Distribution(\"example\", editable=False)\n+    bundle_registration = registration(\"bundle\", distribution)\n+    declared = SimpleNamespace(group=\"vllm.general_plugins\", name=\"example\")\n+    installed = SimpleNamespace(\n+        group=declared.group,\n+        name=declared.name,\n+        value=\"missing.plugin:register\",\n+        dist=distribution,\n+    )\n+    monkeypatch.setattr(discovery, \"_manifest_path\", lambda _item: manifest_path)\n+    monkeypatch.setattr(\n+        discovery,\n+        \"load_manifest\",\n+        lambda _path: SimpleNamespace(\n+            bundle_id=\"org.vllm-hust.example\",\n+            activation=SimpleNamespace(entry_points=(declared,)),\n+        ),\n+    )\n+\n+    with pytest.raises(discovery.DiscoveryError, match=\"targets not packaged\"):\n+        discovery.discover_bundles(\n+            registrations=(bundle_registration,), all_entry_points=(installed,)\n+        )\n+\n+\n def test_inventory_quarantines_invalid_bundle_without_hiding_valid(\n     monkeypatch: pytest.MonkeyPatch, tmp_path\n ) -> None:"
+    },
+    {
+      "sha": "fe5b8497cf3fb698b3e6eb86883ab9538ee0f5e7",
+      "filename": "tests/test_providers.py",
+      "status": "modified",
+      "additions": 42,
+      "deletions": 0,
+      "changes": 42,
+      "blob_url": "https://github.com/vLLM-HUST/extension-manager/blob/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/tests%2Ftest_providers.py",
+      "raw_url": "https://github.com/vLLM-HUST/extension-manager/raw/ff144b469ad8cf7a1109610b3a6a4e3528bc40ee/tests%2Ftest_providers.py",
+      "contents_url": "https://api.github.com/repos/vLLM-HUST/extension-manager/contents/tests%2Ftest_providers.py?ref=ff144b469ad8cf7a1109610b3a6a4e3528bc40ee",
+      "patch": "@@ -11,6 +11,7 @@\n import pytest\n \n from vllm_hust_ext import capabilities\n+from vllm_hust_ext import providers as provider_registry\n from vllm_hust_ext.config import ExtensionConfig\n from vllm_hust_ext.core import (\n     LifecycleState,\n@@ -46,6 +47,47 @@ class _HTTPResponse(BytesIO):\n     status = 200\n \n \n+def test_provider_for_does_not_load_unrelated_external_provider(\n+    monkeypatch: pytest.MonkeyPatch,\n+) -> None:\n+    broken = SimpleNamespace(\n+        name=\"broken\",\n+        load=lambda: (_ for _ in ()).throw(ModuleNotFoundError(\"optional host\")),\n+    )\n+    healthy_provider = SimpleNamespace(name=\"healthy\")\n+    healthy = SimpleNamespace(name=\"healthy\", load=lambda: lambda: healthy_provider)\n+    monkeypatch.setattr(\n+        provider_registry,\n+        \"entry_points\",\n+        lambda *, group: (broken, healthy),\n+    )\n+\n+    assert provider_registry.provider_for(\"healthy\") is healthy_provider\n+    assert isinstance(provider_registry.provider_for(\"vllm\"), VllmProvider)\n+\n+\n+def test_provider_for_reports_selected_external_provider_load_failure(\n+    monkeypatch: pytest.MonkeyPatch,\n+) -> None:\n+    broken = SimpleNamespace(\n+        name=\"broken\",\n+        load=lambda: (_ for _ in ()).throw(ModuleNotFoundError(\"optional host\")),\n+    )\n+    monkeypatch.setattr(\n+        provider_registry,\n+        \"entry_points\",\n+        lambda *, group: (broken,),\n+    )\n+\n+    with pytest.raises(\n+        ValueError,\n+        match=(\n+            \"host provider 'broken' failed to load: ModuleNotFoundError: optional host\"\n+        ),\n+    ):\n+        provider_registry.provider_for(\"broken\")\n+\n+\n def test_bidkv_is_a_vllm_owned_scheduler_policy() -> None:\n     value = manifest(\"bidkv-v0.2.json\")\n     plan = VllmProvider().plan(value, {}, enabled=True)"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+--- a/vllm/v1/core/sched/scheduler.py
++++ b/vllm/v1/core/sched/scheduler.py
+@@ -63,6 +63,9 @@
+ 
+ 
+ class Scheduler(SchedulerInterface):
++    hust_victim_selector_api_version = 1
++    _hust_victim_selector_factory = None
++
+     def __init__(
+         self,
+         vllm_config: VllmConfig,
+@@ -75,6 +78,8 @@
+         log_stats: bool = False,
+     ) -> None:
+         self.vllm_config = vllm_config
++        factory = type(self)._hust_victim_selector_factory
++        self._hust_victim_selector = factory(self) if factory else None
+         self.scheduler_config = vllm_config.scheduler_config
+         self.cache_config = vllm_config.cache_config
+         self.lora_config = vllm_config.lora_config
+@@ -471,11 +476,30 @@
+ 
+                     # The request cannot be scheduled.
+                     # Preempt the lowest-priority request.
+-                    if self.policy == SchedulingPolicy.PRIORITY:
+-                        preempted_req = max(
+-                            self.running,
+-                            key=lambda r: (r.priority, r.arrival_time),
+-                        )
++                    if (
++                        self._hust_victim_selector is not None
++                        or self.policy == SchedulingPolicy.PRIORITY
++                    ):
++                        if self._hust_victim_selector is not None:
++                            preempted_req = self._hust_victim_selector.pick_victim(
++                                self.running,
++                                self.policy,
++                                kv_utilization=self.kv_cache_manager.usage,
++                                now_s=scheduled_timestamp,
++                            )
++                            if not any(r is preempted_req for r in self.running):
++                                raise RuntimeError("Invalid victim selector result")
++                            victim_index = self.running.index(preempted_req)
++                            if (
++                                victim_index < req_index
++                                and preempted_req not in scheduled_running_reqs
++                            ):
++                                req_index -= 1
++                        else:
++                            preempted_req = max(
++                                self.running,
++                                key=lambda r: (r.priority, r.arrival_time),
++                            )
+                         self.running.remove(preempted_req)
+                         if preempted_req in scheduled_running_reqs:
+                             preempted_req_id = preempted_req.request_id

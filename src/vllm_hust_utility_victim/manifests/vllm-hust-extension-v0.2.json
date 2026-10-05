@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.2-experimental",
+  "extension_id": "org.vllm-hust.utility-victim",
+  "extension_version": "0.1.0.dev2",
+  "kind": "in_process_plugin",
+  "host": {
+    "provider": "vllm",
+    "name": "vllm",
+    "version_range": ">=0.23,<0.24"
+  },
+  "runtime": {
+    "type": "python",
+    "process_scope": "vllm-processes",
+    "isolation": "trusted_in_process"
+  },
+  "lifecycle_owner": "vllm",
+  "protocols": [
+    {
+      "name": "vllm.general_plugins",
+      "version_range": null
+    },
+    {
+      "name": "vllm-ascend.utility-victim-private-abi",
+      "version_range": null
+    }
+  ],
+  "implementation": [
+    {
+      "type": "python_entry_point",
+      "group": "vllm.general_plugins",
+      "name": "utility_victim"
+    }
+  ],
+  "requires_services": [],
+  "components": [],
+  "activation": {
+    "entry_points": [
+      {
+        "group": "vllm.general_plugins",
+        "name": "utility_victim"
+      }
+    ],
+    "environment": {
+      "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1"
+    },
+    "additional_config": {
+      "utility_victim_mod": {},
+      "utility_victim_mod_provenance": {
+        "admission_status": "step2_cpu_only_native_equivalent",
+        "source_core": "1aa7cd10b7b16e82fdb29fcc47d3a3cd93bd01dc",
+        "source_core_role": "historical_context_not_algorithm_source",
+        "source_ascend": "76d8939d7e21d17a295adf99e9dda17bde5a88cc",
+        "evidence_ids": [
+          "LOCAL-UV-001",
+          "LOCAL-UV-002",
+          "LOCAL-UV-003"
+        ],
+        "performance_verified": false
+      }
+    }
+  }
+}

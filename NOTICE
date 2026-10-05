@@ -1,0 +1,6 @@
+vllm-hust-utility-victim
+Derived algorithm: intellistream/vllm-ascend-hust-legacy-20260831 PR #39, author cybber695, merge 76d8939d7e21d17a295adf99e9dda17bde5a88cc.
+Original source vllm_ascend/core/victim_selector.py, Apache-2.0.
+Packaging conventions adapted from vLLM-HUST/vllm-hust-vSpec, Apache-2.0.
+Modifications: remove runtime vLLM typing imports, policy-name compatibility, standalone activation/guard/evidence adapter.
+Evidence-only comparison: vLLM-HUST/vllm-hust-bidkv at edb7f090a9fe3698f68d755c36f793d71f9a460d, src/bidkv/adapters/vllm_hust/selector.py (Apache-2.0); not imported or installed by this mod.

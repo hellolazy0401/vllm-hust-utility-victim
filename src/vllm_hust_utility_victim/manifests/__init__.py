@@ -1,0 +1,1 @@
+"""Static extension bundle resources."""

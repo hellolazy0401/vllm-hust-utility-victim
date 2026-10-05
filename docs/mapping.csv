@@ -1,0 +1,3 @@
+﻿mechanism,pr,commit,role,mod,test
+ascend-utility-victim-selection,https://github.com/intellistream/vllm-ascend-hust-legacy-20260831/pull/39,76d8939d7e21d17a295adf99e9dda17bde5a88cc,algorithm_source,historical.py + selector.py + plugin.py,tests/test_selector.py; tests/test_activation.py
+ascend-utility-victim-selection,https://github.com/intellistream/vllm-hust-legacy-20260831/pull/171,5536d0873fb41c4925d0e6e9112a1ea70faeeb3a,related_interface_not_installed,not installed,source comparison only

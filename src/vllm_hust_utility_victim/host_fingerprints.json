@@ -1,0 +1,26 @@
+{
+  "format": "normalized-ast-v1",
+  "module_ast_sha256": "860713c220b2150c0decc09fecd9a83cbdca489055cc616e79fd98ce6eef6e21",
+  "live_methods": {
+    "UtilityVictimSelectorConfig.from_additional_config": "4d29f6efacd25b4a6d0ad857a2ebde3e79fd79b4e2611771ee3481a4b689f048",
+    "UtilityVictimSelectorConfig.validate": "6135d36285e05a64c8392886812be0f9431d7b3cf4ad8fc5004317dafca5c90a",
+    "UtilityVictimSelectorConfig.to_additional_config": "cea380eed252fa90c9a0a5fc5748fea6d396e64d0e12d8663be99179bf8a992d",
+    "UtilityVictimSelectorConfig.from_vllm_config": "2bc54f8598fea83ab130631f9e14cfc03a7685164f695779781260cad2d5c04f",
+    "UnifiedVictimSelector.__init__": "97520fa616ee68aeb2fb4763786a2c773c041d9be58e60ae74d693777898f749",
+    "UnifiedVictimSelector.from_vllm_config": "6887f9f28c169f2192b9e7136a5821134a60c7fd4cc7d44fbfdf173e470561dc",
+    "UnifiedVictimSelector.pick_victim": "ce19371877e6bddcc40c7b48622050ac6c6fcdbc554f86f76259aabd2ff8246a",
+    "UnifiedVictimSelector._pick_default_victim": "c39f6f9cbc4d3ce0253ed8fbabd8e7659f378e1ac8e9f5c930f29113d6abc433",
+    "UnifiedVictimSelector._can_use_utility": "4ef98422f8e464eabdb2d6118154536727ac83fbb4eb5a78ed6412a5925ad89a",
+    "UnifiedVictimSelector._resolve_now": "229cf76b6c0460f8e50995f8d9e58427f1fa49cb03a4ac98d34f7364b13b294a",
+    "UnifiedVictimSelector._rank_candidates": "5ee6fd9dc46271cf0a3855d660c96cc2bc0f7556f775d9a43a7c328e74d76053",
+    "UnifiedVictimSelector._score_request": "465d3b636f2aef50834e5823a4845647667497468e178f08c23ea79fd62fbd7d",
+    "UnifiedVictimSelector._compute_utility": "c062b262db7452f948096b6e5bc99832d43215cfc01fffa9ef5a654a9dec731f",
+    "UnifiedVictimSelector._compute_completion": "a8e61d573b783fd76b0e58a062dbb5a284b27f16f2b9afc2cc118e56742ef434",
+    "UnifiedVictimSelector._output_tokens": "357dff14a7ff78b987c23fadf53be61545ce5cab4a9838ad43518e7545e0fb65",
+    "UnifiedVictimSelector._record_preemption": "67cba76cf707efb1583a346aea3a2f833e7213d0a6791f90b74aac18a41422c3",
+    "UnifiedVictimSelector.export_metrics": "5552e4d39ea48ead598b3ad382bfe7a4573100e3b51fcec95f87a61aef5eb138",
+    "UnifiedVictimSelector.get_recent_snapshots": "ea155af9263b54b735249a42caa84f0ad6b9ad5ab9b74ca779ed50e2b6bc64b5",
+    "UnifiedVictimSelector.emit_observability_log": "b8ee0a757728630ed3c67fc246ffd4173427efc4a39480d79fc7d351121e4348",
+    "UnifiedVictimSelector._percentile": "d8986b668b721fcc84c193387910b469e1281c12485177c78ac758beaf5c4edb"
+  }
+}

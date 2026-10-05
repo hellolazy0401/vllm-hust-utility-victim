@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: vllm-hust-utility-victim
+Version: 0.1.0.dev2
+Summary: Default-off extraction of Ascend PR 39 utility victim selection
+License-Expression: Apache-2.0
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Provides-Extra: test
+Requires-Dist: pytest>=8; extra == "test"
+Requires-Dist: build>=1; extra == "test"
+Requires-Dist: ruff>=0.12; extra == "test"
+Dynamic: license-file
+
+# vllm-hust-utility-victim
+
+**容器 Source 0.23 用户请优先阅读 [dev2 容器适配](docs/CONTAINER_023.md)**：需应用精确宿主接口补丁，再启用 core-contract-v1 后端。下面原生等价描述仅指先前本地 legacy 接口目标。
+
+**0.1.0.dev2 修复**：已修复 Python 3.11/3.12 指纹不一致和源码测试子进程导入问题，详见 [WSL 修复记录](docs/PYTHON311_FIX.md)。
+
+从 **Ascend #39** 抽取的单机制 Mod：在既有抢占入口中用 utility 排序选择 victim。
+按《操作记录.MD》第 1–2 步交付，使用本地 `vllm-hust-vSpec` 的 src 布局、动态版本、双 entry point、v0.2 manifest 和静态资源打包约定。
+
+**状态：可构建、可安装、CPU 保真验证候选；当前宿主已内建等价算法，不是新增优化，不声明性能收益。**
+本包只封装排序与其门控，不修改 C++、scheduler token 账目、KV 释放、恢复链或 Prefix Routing。
+未创建远程仓库、未发布 PyPI、未启动容器或 NPU 服务。
+
+## 来源与范围
+
+- 算法：[Ascend #39](https://github.com/intellistream/vllm-ascend-hust-legacy-20260831/pull/39)，cybber695；合并 SHA `76d8939d7e21d17a295adf99e9dda17bde5a88cc`。
+- 历史上下文 Core：`1aa7cd10b7b16e82fdb29fcc47d3a3cd93bd01dc`；它不是第二个算法来源。
+- [Core #171](https://github.com/intellistream/vllm-hust-legacy-20260831/pull/171) 仅为相关接口，**本包不安装其 victim-selector entry point，不宣称覆盖 Core 默认 scheduler**。
+- 适配：现有 Ascend `UnifiedVictimSelector.from_vllm_config` 工厂。支持源码相符且经该工厂构造实例的 recompute、dynamic-batch、profiling-chunk、balance 路径。KV consumer 特殊分支仍由宿主管理。
+- Core 版本声明 `>=0.23,<0.24` 只是本次目标版本线；真正的代码准入还要求 selector 整个模块及 live methods 的 AST SHA-256 相符。不是所有该版本号宿主都可用，也没有验证完整 Core/Ascend 二元组可运行。
+
+排序公式：`U = computed_tokens / (1 + 0.5 * completion + 0.3 * preemptions + 1e-6)`；U 越大越先被抢占，并列按 arrival_time、request_id 升序。completion 是 output/max_tokens，截断到 [0,1]；权重可配置。computed_tokens 只是潜在释放量代理，不是已释放 bytes。
+
+## 本地构建与检查（第 2 步）
+
+```bash
+python -m pip install -e ".[test]"
+python -m pytest tests -q
+python -m build
+python -m pip install --no-deps dist/vllm_hust_utility_victim-0.1.0.dev2-py3-none-any.whl
+```
+
+完整记录见 [验证报告](docs/VALIDATION.md)，机制对应见 [映射表](docs/MAPPING.md) 与 [JSON](docs/mapping.json)，筛选见 [筛选原则核对](docs/SELECTION.md)。
+
+## 开关契约（供后续部署使用，本次未运行部署）
+
+| 环境变量 | 未设置时 | 含义 |
+|---|---|---|
+| `VLLM_HUST_UTILITY_VICTIM_ENABLE` | `0` | 显式启用工厂替换 |
+| `VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH` | `0` | `1` 优先关闭，不加载宿主；已创建 Mod 实例也回到 FCFS/PRIORITY 选人 |
+| `VLLM_HUST_UTILITY_VICTIM_EVIDENCE` | `0` | `1` 输出安装和首次 utility 实际选人事件 |
+
+manifest 的 `activation.environment` 写 `ENABLE=1`，表示 **extension enable 后注入的值**；Python 默认仍为 0。若把 manifest 也写 0，管理器标记 enabled 后算法仍不开启。
+不在 manifest 强制写 `KILL_SWITCH=0`，避免覆盖外部紧急关闭设置。
+
+管理器后续使用方式：安装 `vllm-hust-ext` 后，通过 `vllm-hust-ext extension enable org.vllm-hust.utility-victim`，再由 `vllm-hust-ext run -- vllm serve ...` 注入激活配置。仅安装本 wheel 不启用算法。
+
+可选 `--additional-config` 示例（JSON）：
+
+```json
+{"utility_victim_mod":{"utility_kv_gate":0.8,"utility_cooldown_s":0.1,"utility_min_running":2}}
+```
+
+未显式设置的参数继承历史默认值：gate=0、cooldown=0、min_running=1，**不会额外要求 KV 高压力**。这些仅在宿主已经进入选 victim 路径时使用。原生 `enable_utility_victim_selection=true` 或 `utility_kill_switch=true` 与 Mod 同开会报错，避免混合两套控制。
+
+禁用后重启进程是完整撤销工厂 patch 的方式；进程内 kill switch 仅切回默认选人，不卸载已经安装的 classmethod。必须在 scheduler 实例创建前加载插件，已存在的原生实例不会被追溯替换。
+
+## 证据的含义
+
+`LEGACY017_EVIDENCE installed` 表示工厂已替换。
+`LEGACY017_EVIDENCE runtime_effective` 只表示 utility 选人分支被执行，附 `selection_changed`，明确标记 `actual_kv_freed_verified=false`。
+它不是 NPU 推理成功、实际释放 KV、吞吐提升的证明。历史 selector 的 `total_preemptions` / `total_tokens_freed` 是选人调用与 token 代理计数，名称沿用源实现；不能当作释放确认。
+
+本次 CPU 检查包括 1,200 个历史差分决策。没有真机数据；PR 自报 +137.82% 等数字没有独立 utility 消融证据，本包不继承这些收益声明。
+历史按 request_id 累积的 metrics 字典仍可能随服务请求数增长，长期服务内存与公平性需后续验证。本次保持历史算法保真，不将观测重构混成另一项机制。

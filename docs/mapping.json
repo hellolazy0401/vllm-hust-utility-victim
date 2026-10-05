@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-01",
+  "mechanism_id": "ascend-utility-victim-selection",
+  "distribution": "vllm-hust-utility-victim",
+  "version": "0.1.0.dev2",
+  "extension_id": "org.vllm-hust.utility-victim",
+  "prs": [
+    {
+      "repository": "intellistream/vllm-ascend-hust-legacy-20260831",
+      "number": 39,
+      "role": "algorithm_source",
+      "author": "cybber695",
+      "url": "https://github.com/intellistream/vllm-ascend-hust-legacy-20260831/pull/39",
+      "merge_sha": "76d8939d7e21d17a295adf99e9dda17bde5a88cc",
+      "merged_at": "2026-05-27T02:30:56Z",
+      "evidence": "evidence\\vllm-ascend-hust-legacy-20260831-pr-39.json"
+    },
+    {
+      "repository": "intellistream/vllm-hust-legacy-20260831",
+      "number": 171,
+      "role": "related_interface_not_installed",
+      "author": "cybber695",
+      "url": "https://github.com/intellistream/vllm-hust-legacy-20260831/pull/171",
+      "merge_sha": "5536d0873fb41c4925d0e6e9112a1ea70faeeb3a",
+      "merged_at": "2026-07-23T11:38:20Z",
+      "evidence": "evidence\\vllm-hust-legacy-20260831-pr-171.json"
+    }
+  ],
+  "historical_source": {
+    "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-hust-utility-victim\\evidence\\ascend-pr39-victim_selector.py",
+    "sha256": "a2c8ab3101f2fdbc091134eb44e13c75ebd0b4e8b3c5343d91c6d7b719589d94"
+  },
+  "source_core": "1aa7cd10b7b16e82fdb29fcc47d3a3cd93bd01dc",
+  "source_core_role": "reported_historical_context_not_algorithm_source",
+  "source_ascend": "76d8939d7e21d17a295adf99e9dda17bde5a88cc",
+  "historical_ascend_pair": "03ae1d03db8049cd2a5c3f824039814459542e25",
+  "current_algorithm_disposition": "builtin",
+  "current_selector_ast_equal_to_pr39": true,
+  "delivery_disposition": "packaged_extraction_for_ablation",
+  "current_host_git_head": null,
+  "current_host_git_head_note": "Local source directories have no .git; anchors are not fork HEADs.",
+  "local_hosts": [
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-ascend-hust\\vllm_ascend\\core\\victim_selector.py",
+      "sha256": "a2c8ab3101f2fdbc091134eb44e13c75ebd0b4e8b3c5343d91c6d7b719589d94",
+      "relative_path": "vllm-ascend-hust/vllm_ascend/core/victim_selector.py",
+      "factory_call_lines": []
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-ascend-hust\\vllm_ascend\\core\\recompute_scheduler.py",
+      "sha256": "2d723b3796143764c6d4516650208b4d0f039cd9b7be07e724ad1b90a462f83b",
+      "relative_path": "vllm-ascend-hust/vllm_ascend/core/recompute_scheduler.py",
+      "factory_call_lines": [
+        117
+      ]
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-ascend-hust\\vllm_ascend\\core\\scheduler_dynamic_batch.py",
+      "sha256": "5ce092eeb1f6ab33291314c482cf23ec4ace1b07d17f5a8e80fa1af6a3e2181f",
+      "relative_path": "vllm-ascend-hust/vllm_ascend/core/scheduler_dynamic_batch.py",
+      "factory_call_lines": [
+        161
+      ]
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-ascend-hust\\vllm_ascend\\core\\scheduler_profiling_chunk.py",
+      "sha256": "91fd88606ea828a2152a0ebceea10867be3d9f0c706ce5460fe384d2ab54155f",
+      "relative_path": "vllm-ascend-hust/vllm_ascend/core/scheduler_profiling_chunk.py",
+      "factory_call_lines": [
+        99
+      ]
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-ascend-hust\\vllm_ascend\\patch\\platform\\patch_balance_schedule.py",
+      "sha256": "501353015b4120b6dcf21e914f634f35b2eef36184d8edd4fbc0f040b097b5b4",
+      "relative_path": "vllm-ascend-hust/vllm_ascend/patch/platform/patch_balance_schedule.py",
+      "factory_call_lines": [
+        85
+      ]
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-hust\\vllm\\v1\\core\\sched\\victim_selector.py",
+      "sha256": "5aa7c9e9b8d3ab60c8c24bb879590e6d05eaa6de259c7441f31d4079bc0de99d",
+      "relative_path": "vllm-hust/vllm/v1/core/sched/victim_selector.py",
+      "factory_call_lines": []
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust\\vllm-hust\\vllm\\v1\\core\\sched\\scheduler.py",
+      "sha256": "46b25b0ff6b56499bb90209daee166aaf10974a2e7507720cce0f2950b739cde",
+      "relative_path": "vllm-hust/vllm/v1/core/sched/scheduler.py",
+      "factory_call_lines": []
+    }
+  ],
+  "upstream_metadata": {
+    "vllm-hust": {
+      "release_version": "0.23.1",
+      "upstream_version": "0.23.1rc0",
+      "upstream_commit": "1f486d96a17303ce8db8e02be39545b2be338446"
+    },
+    "vllm-ascend-hust": {
+      "release_version": "0.19.1",
+      "upstream_version": "0.19.1rc1",
+      "upstream_commit": "b5fbfffe1dc29261c3c8e0778808cfffb19a95fb"
+    }
+  },
+  "template_files": [
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust-vSpec\\pyproject.toml",
+      "sha256": "7043acb74ec82ee3a648a1fd22ffb12f0abfbf89401af9c26ff6be95d5315080"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\vllm-hust-vSpec\\src\\vllm_hust_vspec\\manifests\\vllm-hust-extension-v0.2.json",
+      "sha256": "ce1cf79f9e4c39d5eacbc9a171e99e8d5dd6c5feadd7efe16d505e787276e1a2"
+    }
+  ],
+  "input_documents": [
+    {
+      "path": "D:\\Desktop\\mining\\文档\\20个已经核对的patchsets.md",
+      "sha256": "6cfb70ec2b22bbc8eda487f148b7865d56be2caf5408b03eaea63383a68206f3"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\9.9学生双周会.pdf",
+      "sha256": "48d700c885b782fdce09e7521c776d95ff6f9fa280f743d370eeb1ba7b99f85b"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\ascend仓库69个候选PR完整清单-含作者.md",
+      "sha256": "dc30b8ef4f7229ed6b6cab1a792a28b7b8ceb785b3cef4bae047816d9421ddc9"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\Legacy017 历史性能包：背景、设计、实现与验收.md",
+      "sha256": "1d428c23bfa481a5a8445995ca8b55b3dc878ef8699d5085c8a4ca56a5f834be"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\legacy017-perf仓库机制与PR映射-完整版.md",
+      "sha256": "72e4cd9e5d729687eebd490985340b3382aef5858c206e4c90494fe68e95efbf"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\legacy017-perf网络通信部分-现状与缺失清单.md",
+      "sha256": "49372f05c823bfd16965cea4213fa5b5fd32cb057170f4ee991495dd919d8c33"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\legacy仓库89个候选PR完整清单-含作者.md",
+      "sha256": "f4d9de03ddc23e3a36f42d7c0c5dc9d7ed35d7d63a44143a476799ce3db85127"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\vLLM-HUST Legacy 0.17 优化提炼：候选 Mod 现状、合理性与验证计划.md",
+      "sha256": "82176649b7abd648090fe82ec64d9df222be060089bde826607c8d6517d40517"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\操作记录.MD",
+      "sha256": "d0038305e438bcf1121029a810bf0e6302ae158281ce4d497827e51d131869d1"
+    },
+    {
+      "path": "D:\\Desktop\\mining\\文档\\调度_Prefix_Routing与抢占机制清单.md",
+      "sha256": "dfdcdb501b3e4a20cbaeaa407da98fc159c5eedf55d8ffa2bb75a9c845da5e63"
+    }
+  ],
+  "evidence_ids": [
+    "LOCAL-UV-001",
+    "LOCAL-UV-002",
+    "LOCAL-UV-003"
+  ],
+  "runtime_validation": "not_run",
+  "performance_validation": "not_run",
+  "test_scope": "CPU stubs and frozen historical implementation, not full scheduler/NPU integration",
+  "container_source_adapter": {
+    "backend": "core-contract-v1",
+    "contract": "experimental local API, not upstream PreemptionPolicy",
+    "snapshot": "D:/Desktop/mining/Source",
+    "host_identity": "host_patch/identity.json",
+    "source_unmodified": true,
+    "native_equivalent": false,
+    "requires_host_patch": true,
+    "validation": "CPU only; no NPU run"
+  }
+}

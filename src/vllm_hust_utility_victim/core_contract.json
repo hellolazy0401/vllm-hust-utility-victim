@@ -1,0 +1,16 @@
+{
+  "source": "D:\\Desktop\\mining\\Source\\vllm\\vllm\\v1\\core\\sched\\scheduler.py",
+  "before_sha256": "9ae1491f57a6294e32416b93ef2ea68107fa0d65c3a4d7f745f1261012f735e9",
+  "after_sha256": "9b605fd2eae661a47113705c5eba7c9b5bc8495db63992cf71c60ab160da730f",
+  "methods": {
+    "__init__": "0077d960cf1c54ced18d3462a9c2dc7c0c39094245402fd98629f4ec91ebdc14",
+    "schedule": "d527fd1713e1bd77a4b1c3a071e1bb0551f5dd9380d25cffbdb52cc4ad966ab2",
+    "_preempt_request": "767939f2427e2541ad141c801eeaa39fd1f2a8d21b07ab2e1ee1180b6e4ef051"
+  },
+  "balance_module": "1caf00d5b193e0c6aa6cf3b602175eeda91a72cc9f32f23a24b91eebb0f2674f",
+  "balance_methods": {
+    "__init__": "93f294847ae014e665d1c1ed8bde002f8eabe102021058fc89c05fc8b4525d4f",
+    "schedule": "bd00a9298b9d2ea0ead76bfeb3c61a4b6bf30b761b01478bb2198fd0f9bd8229"
+  },
+  "swa_init_wrapper": "04bed13143473b8780fdb26aa023e9e92e5da708a7225482dd2335a60354d7fb"
+}

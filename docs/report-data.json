@@ -1,0 +1,3712 @@
+[
+  {
+    "name": "off-m65-c1-r1",
+    "concurrency": 1,
+    "mode": "off",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 77,
+      "max_prompt_tokens_observed": 28638,
+      "prompt_tokens_p50": 13806.0,
+      "max_turn_index_reached": 26,
+      "distinct_trajectories_started": 4,
+      "sessions_completed": 3,
+      "requests_completed_in_window": 76,
+      "requests_drained": 1,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 35504,
+      "output_tokens_per_second": 39.44888888888889,
+      "output_tokens_per_second_per_chip": 19.724444444444444,
+      "decode_tokens_per_second_p90": 44.01672571158207,
+      "decode_speed_samples": 76,
+      "ttft_seconds_p95": 1.8760696141980588,
+      "client_inflight_seconds": {
+        "0": 0.21953660249710083,
+        "1": 899.7804633975029
+      },
+      "mean_client_inflight": 0.9997560704416699,
+      "full_concurrency_fraction": 0.9997560704416699,
+      "drain_seconds": 14.739120330661535,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "a68431af211c4dfa966d699bbb67a80f",
+      "started_at_unix": 1791000526.5881793,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 1,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": false
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "1"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" off \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "off",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 875.5747079849243,
+    "tpot_mean_ms": 23.415315015559788,
+    "tpot_p95_ms": 24.476748657783265,
+    "e2e_p95_ms": 40938.52128274739,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 77.0,
+      "vllm:prompt_tokens_total": 1059553.0,
+      "vllm:generation_tokens_total": 36143.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 0,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "e910496a71b7c9796f963ab796a3c662b4265397965121e646d1235edaca7876"
+  },
+  {
+    "name": "on-m65-c1-r1",
+    "concurrency": 1,
+    "mode": "on",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 78,
+      "max_prompt_tokens_observed": 28638,
+      "prompt_tokens_p50": 14022.5,
+      "max_turn_index_reached": 26,
+      "distinct_trajectories_started": 4,
+      "sessions_completed": 3,
+      "requests_completed_in_window": 77,
+      "requests_drained": 1,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 36283,
+      "output_tokens_per_second": 40.31444444444445,
+      "output_tokens_per_second_per_chip": 20.157222222222224,
+      "decode_tokens_per_second_p90": 45.72131300746206,
+      "decode_speed_samples": 77,
+      "ttft_seconds_p95": 1.889361854456365,
+      "client_inflight_seconds": {
+        "0": 0.23380046151578426,
+        "1": 899.7661995384842
+      },
+      "mean_client_inflight": 0.9997402217094269,
+      "full_concurrency_fraction": 0.9997402217094269,
+      "drain_seconds": 5.967788792215288,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "36ca7c81453242d1a3b86200bceb2c58",
+      "started_at_unix": 1791003740.1890173,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 1,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": true
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "0"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" on \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "on",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 867.2188511118293,
+    "tpot_mean_ms": 22.617200941725233,
+    "tpot_p95_ms": 23.724104080086807,
+    "e2e_p95_ms": 39593.18858180195,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 78.0,
+      "vllm:prompt_tokens_total": 1087464.0,
+      "vllm:generation_tokens_total": 36542.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 4,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "800066ec478f41ed621ea474039b45e4c44de559f367f8b3704e2cbf1db96502"
+  },
+  {
+    "name": "off-m65-c2-r1",
+    "concurrency": 2,
+    "mode": "off",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 125,
+      "max_prompt_tokens_observed": 41173,
+      "prompt_tokens_p50": 14655.0,
+      "max_turn_index_reached": 34,
+      "distinct_trajectories_started": 6,
+      "sessions_completed": 4,
+      "requests_completed_in_window": 123,
+      "requests_drained": 2,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 59721,
+      "output_tokens_per_second": 66.35666666666667,
+      "output_tokens_per_second_per_chip": 33.178333333333335,
+      "decode_tokens_per_second_p90": 40.63884881047793,
+      "decode_speed_samples": 123,
+      "ttft_seconds_p95": 2.515363665577024,
+      "client_inflight_seconds": {
+        "0": 0.0001284303143620491,
+        "1": 0.4406405407935381,
+        "2": 899.5592310288921
+      },
+      "mean_client_inflight": 1.9995101139984197,
+      "full_concurrency_fraction": 0.999510256698769,
+      "drain_seconds": 35.63921352196485,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "0fa2d4ced65a4a48acf03e648e1cc033",
+      "started_at_unix": 1791018220.3164043,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 2,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": false
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "1"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" off \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "off",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 935.5521723628044,
+    "tpot_mean_ms": 27.433913574908537,
+    "tpot_p95_ms": 33.80421619957338,
+    "e2e_p95_ms": 44236.2772103399,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 125.0,
+      "vllm:prompt_tokens_total": 2071956.0,
+      "vllm:generation_tokens_total": 61284.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 0,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "9e9645622a2fd896a720346520d9e1569c093493b665c6be74270703ef498be9"
+  },
+  {
+    "name": "on-m65-c2-r1",
+    "concurrency": 2,
+    "mode": "on",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 125,
+      "max_prompt_tokens_observed": 41173,
+      "prompt_tokens_p50": 14655.0,
+      "max_turn_index_reached": 34,
+      "distinct_trajectories_started": 6,
+      "sessions_completed": 4,
+      "requests_completed_in_window": 123,
+      "requests_drained": 2,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 59769,
+      "output_tokens_per_second": 66.41,
+      "output_tokens_per_second_per_chip": 33.205,
+      "decode_tokens_per_second_p90": 40.70811308167541,
+      "decode_speed_samples": 123,
+      "ttft_seconds_p95": 2.534284984599799,
+      "client_inflight_seconds": {
+        "0": 0.0001291409134864807,
+        "1": 0.41672084759920835,
+        "2": 899.5831500114873
+      },
+      "mean_client_inflight": 1.999536689856193,
+      "full_concurrency_fraction": 0.999536833346097,
+      "drain_seconds": 31.723404477350414,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "a392a568ce414aacbe095513af17a695",
+      "started_at_unix": 1791006349.2285018,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 2,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": true
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "0"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" on \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "on",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 943.5481438413262,
+    "tpot_mean_ms": 27.545299048446843,
+    "tpot_p95_ms": 34.54315565647445,
+    "e2e_p95_ms": 42096.980458591126,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 125.0,
+      "vllm:prompt_tokens_total": 2071956.0,
+      "vllm:generation_tokens_total": 61284.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 4,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "96e1ee12466b85da9c6b6a59abaad2f4493c6ad197971032681db01018620bb6"
+  },
+  {
+    "name": "off-m65-c4-r1",
+    "concurrency": 4,
+    "mode": "off",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 182,
+      "max_prompt_tokens_observed": 41173,
+      "prompt_tokens_p50": 17405.5,
+      "max_turn_index_reached": 34,
+      "distinct_trajectories_started": 8,
+      "sessions_completed": 4,
+      "requests_completed_in_window": 178,
+      "requests_drained": 4,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 97506,
+      "output_tokens_per_second": 108.34,
+      "output_tokens_per_second_per_chip": 54.17,
+      "decode_tokens_per_second_p90": 36.43808913504434,
+      "decode_speed_samples": 178,
+      "ttft_seconds_p95": 2.6848208060488106,
+      "client_inflight_seconds": {
+        "0": 0.00013372208923101425,
+        "1": 0.0009925412014126778,
+        "2": 0.0007168278098106384,
+        "3": 0.7036118470132351,
+        "4": 899.2945450618863
+      },
+      "mean_client_inflight": 3.999212713317118,
+      "full_concurrency_fraction": 0.9992161611798737,
+      "drain_seconds": 91.49400938581675,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "16ec0ab723e04e169fb91a7d45e025b3",
+      "started_at_unix": 1791008079.5877287,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 4,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": false
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "1"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" off \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "off",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 1390.5064789578319,
+    "tpot_mean_ms": 33.93599058781434,
+    "tpot_p95_ms": 45.33779106999587,
+    "e2e_p95_ms": 66866.30471558312,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 182.0,
+      "vllm:prompt_tokens_total": 3303960.0,
+      "vllm:generation_tokens_total": 103248.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 0,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "5dc62c28228e8988f0fdc13018b47acfa78633b60bdc65dae082d7fc55c47b20"
+  },
+  {
+    "name": "on-m65-c4-r1",
+    "concurrency": 4,
+    "mode": "on",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 181,
+      "max_prompt_tokens_observed": 41173,
+      "prompt_tokens_p50": 17090.0,
+      "max_turn_index_reached": 34,
+      "distinct_trajectories_started": 8,
+      "sessions_completed": 4,
+      "requests_completed_in_window": 177,
+      "requests_drained": 4,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 96933,
+      "output_tokens_per_second": 107.70333333333333,
+      "output_tokens_per_second_per_chip": 53.85166666666667,
+      "decode_tokens_per_second_p90": 36.11086415643278,
+      "decode_speed_samples": 177,
+      "ttft_seconds_p95": 2.6571524629369376,
+      "client_inflight_seconds": {
+        "0": 0.0001544710248708725,
+        "1": 0.0010145120322704315,
+        "2": 0.0007076375186443329,
+        "3": 0.6842968920245767,
+        "4": 899.3138264873996
+      },
+      "mean_client_inflight": 3.999234029347491,
+      "full_concurrency_fraction": 0.9992375849859996,
+      "drain_seconds": 39.529949453659356,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "e579a951e31746ceb0b734120305bf60",
+      "started_at_unix": 1791009395.296257,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 4,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": true
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "0"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" on \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "on",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 1398.9853207021952,
+    "tpot_mean_ms": 34.04127940929769,
+    "tpot_p95_ms": 45.76941615061608,
+    "e2e_p95_ms": 69807.15419165787,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 181.0,
+      "vllm:prompt_tokens_total": 3265970.0,
+      "vllm:generation_tokens_total": 99556.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 4,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "de7b5bfbbb3ac44d20bb285467f729a261862b7635f3666752bbbcc4d3b86832"
+  },
+  {
+    "name": "off-m65-c8-r1",
+    "concurrency": 8,
+    "mode": "off",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 269,
+      "max_prompt_tokens_observed": 55491,
+      "prompt_tokens_p50": 14655.0,
+      "max_turn_index_reached": 37,
+      "distinct_trajectories_started": 8,
+      "sessions_completed": 6,
+      "requests_completed_in_window": 261,
+      "requests_drained": 8,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 146138,
+      "output_tokens_per_second": 162.37555555555556,
+      "output_tokens_per_second_per_chip": 81.18777777777778,
+      "decode_tokens_per_second_p90": 29.86863425386144,
+      "decode_speed_samples": 261,
+      "ttft_seconds_p95": 2.747880484908819,
+      "client_inflight_seconds": {
+        "0": 0.00016950257122516632,
+        "1": 0.0010066013783216476,
+        "2": 0.0007296381518244743,
+        "3": 0.0006614178419113159,
+        "4": 0.0006529372185468674,
+        "5": 0.0009480807930231094,
+        "6": 0.0006868680939078331,
+        "7": 0.9970723986625671,
+        "8": 898.9980725552887
+      },
+      "mean_client_inflight": 7.998866678583953,
+      "full_concurrency_fraction": 0.9988867472836541,
+      "drain_seconds": 27.976930779404938,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "e856a1639261421fbb5249da76e14ee2",
+      "started_at_unix": 1791010687.0129864,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 8,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": false
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "1"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" off \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "off",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 1052.852745167911,
+    "tpot_mean_ms": 46.04265476523217,
+    "tpot_p95_ms": 61.80716899400654,
+    "e2e_p95_ms": 87137.39985786378,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 269.0,
+      "vllm:prompt_tokens_total": 4705724.0,
+      "vllm:generation_tokens_total": 149912.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 0,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "9aa58ef0aa53d981463dcd44994b4550681306205cc92046b437731fae73fd9f"
+  },
+  {
+    "name": "on-m65-c8-r1",
+    "concurrency": 8,
+    "mode": "on",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 264,
+      "max_prompt_tokens_observed": 55491,
+      "prompt_tokens_p50": 14559.0,
+      "max_turn_index_reached": 37,
+      "distinct_trajectories_started": 8,
+      "sessions_completed": 5,
+      "requests_completed_in_window": 256,
+      "requests_drained": 8,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 142759,
+      "output_tokens_per_second": 158.6211111111111,
+      "output_tokens_per_second_per_chip": 79.31055555555555,
+      "decode_tokens_per_second_p90": 28.123006870416283,
+      "decode_speed_samples": 256,
+      "ttft_seconds_p95": 2.713216918054968,
+      "client_inflight_seconds": {
+        "0": 0.00015889108180999756,
+        "1": 0.0009829914197325706,
+        "2": 0.0007152482867240906,
+        "3": 0.0006303181871771812,
+        "4": 0.0006347065791487694,
+        "5": 0.0009468812495470047,
+        "6": 0.0006749778985977173,
+        "7": 0.9500658828765154,
+        "8": 899.0451901024207
+      },
+      "mean_client_inflight": 7.998919566157792,
+      "full_concurrency_fraction": 0.9989391001138008,
+      "drain_seconds": 43.77478008158505,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "f7ca8a0ad2cf4a84a031997347e124ba",
+      "started_at_unix": 1791012163.005366,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 8,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": true
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "0"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" on \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "on",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 1021.838684566319,
+    "tpot_mean_ms": 47.647987679767226,
+    "tpot_p95_ms": 63.33724739846237,
+    "e2e_p95_ms": 88615.23441085592,
+    "deltas": {
+      "vllm:num_preemptions_total": 0.0,
+      "vllm:request_success_total": 264.0,
+      "vllm:prompt_tokens_total": 4531187.0,
+      "vllm:generation_tokens_total": 148729.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 4,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "487bc9c28fe97858c2bdb95d0e0310e61f39715bc99152afd6e9944eedc73f73"
+  },
+  {
+    "name": "off-m65-c16-r1",
+    "concurrency": 16,
+    "mode": "off",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 339,
+      "max_prompt_tokens_observed": 40244,
+      "prompt_tokens_p50": 13086.0,
+      "max_turn_index_reached": 29,
+      "distinct_trajectories_started": 8,
+      "sessions_completed": 6,
+      "requests_completed_in_window": 323,
+      "requests_drained": 16,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 157522,
+      "output_tokens_per_second": 175.02444444444444,
+      "output_tokens_per_second_per_chip": 87.51222222222222,
+      "decode_tokens_per_second_p90": 19.306774114946485,
+      "decode_speed_samples": 323,
+      "ttft_seconds_p95": 9.237753272056578,
+      "client_inflight_seconds": {
+        "0": 0.00021552294492721558,
+        "1": 0.0010556327179074287,
+        "2": 0.0007627485319972038,
+        "3": 0.000654987059533596,
+        "4": 0.000638728030025959,
+        "5": 0.0009707612916827202,
+        "6": 0.0006606178358197212,
+        "7": 0.0007203882560133934,
+        "8": 0.00070140790194273,
+        "9": 0.0006238063797354698,
+        "10": 0.0006430381909012794,
+        "11": 0.0006433567032217979,
+        "12": 0.0009139012545347214,
+        "13": 0.0006784684956073761,
+        "14": 0.000678488053381443,
+        "15": 0.9794367700815201,
+        "16": 899.0100013762712
+      },
+      "mean_client_inflight": 15.998807281522701,
+      "full_concurrency_fraction": 0.9989000015291902,
+      "drain_seconds": 183.86035599932075,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "caaf91a4a6744d2287201b1f988733f5",
+      "started_at_unix": 1791013448.7631848,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 16,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": false
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "1"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" off \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "off",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 1519.064961001277,
+    "tpot_mean_ms": 81.31433718261184,
+    "tpot_p95_ms": 151.69345108814613,
+    "e2e_p95_ms": 110545.96144519743,
+    "deltas": {
+      "vllm:num_preemptions_total": 398.0,
+      "vllm:request_success_total": 339.0,
+      "vllm:prompt_tokens_total": 4790664.0,
+      "vllm:generation_tokens_total": 187450.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [],
+    "installed_events": 0,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "19234a0e1d8a997e3d811de4ec703cb1f4c5f4a9922e85ef326241d76844b55f"
+  },
+  {
+    "name": "on-m65-c16-r1",
+    "concurrency": 16,
+    "mode": "on",
+    "summary": {
+      "valid": true,
+      "measurement_seconds": 900.0,
+      "requests_started": 312,
+      "max_prompt_tokens_observed": 40244,
+      "prompt_tokens_p50": 12045.5,
+      "max_turn_index_reached": 29,
+      "distinct_trajectories_started": 8,
+      "sessions_completed": 4,
+      "requests_completed_in_window": 296,
+      "requests_drained": 16,
+      "failed_requests": 0,
+      "observed_output_tokens_in_window": 136231,
+      "output_tokens_per_second": 151.36777777777777,
+      "output_tokens_per_second_per_chip": 75.68388888888889,
+      "decode_tokens_per_second_p90": 19.225105712074566,
+      "decode_speed_samples": 296,
+      "ttft_seconds_p95": 6.525029728421941,
+      "client_inflight_seconds": {
+        "0": 0.00019619334489107132,
+        "1": 0.0009749801829457283,
+        "2": 0.0007241582497954369,
+        "3": 0.0006400179117918015,
+        "4": 0.000656898133456707,
+        "5": 0.0009498214349150658,
+        "6": 0.0006644474342465401,
+        "7": 0.0007245577871799469,
+        "8": 0.0007119281217455864,
+        "9": 0.000627388246357441,
+        "10": 0.0006663082167506218,
+        "11": 0.0006331764161586761,
+        "12": 0.0009069414809346199,
+        "13": 0.0006805183365941048,
+        "14": 0.000682387501001358,
+        "15": 0.8663149820640683,
+        "16": 899.1232452951372
+      },
+      "mean_client_inflight": 15.998935201661661,
+      "full_concurrency_fraction": 0.999025828105708,
+      "drain_seconds": 157.88735517673194,
+      "aborted": false,
+      "planned_measurement_seconds": 900.0
+    },
+    "config": {
+      "tool_version": "0.1.2",
+      "schema": "swe-prefix-reuse/v1",
+      "run_id": "f531b2823fa540c787c59ab3c9042a4c",
+      "started_at_unix": 1791015656.5408225,
+      "endpoint": "http://127.0.0.1:18180/v1/completions",
+      "model": "qwen3.5-35b-a3b",
+      "workload_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+      "tokenizer": {
+        "path": "/models/Qwen3.5-35B-A3B",
+        "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+        "transformers": "5.18.0",
+        "enable_thinking": true
+      },
+      "concurrency": 16,
+      "data_parallel_size": null,
+      "routing_policy": "server/relay managed; X-Correlation-ID per session",
+      "duration": 900.0,
+      "chips": 2,
+      "seed": 0,
+      "timeout": 1800,
+      "server_max_context": 262144,
+      "cache_policy": "unique salt per session play; reused within session; no cross-session reuse",
+      "window_policy": "cold-start fixed duration; count streamed tokens in window; drain in-flight only",
+      "server_metadata": {
+        "metadata_schema": "utility-victim-server-metadata/v1",
+        "campaign": "utility-c1-c16-m65",
+        "prepared_date": "2026-10-03",
+        "status": "prepared_from_evidence_pending_current_runtime_confirmation",
+        "engine": {
+          "name": "vllm",
+          "version": "0.23.0+empty",
+          "commit": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+          "source_dirty": true,
+          "editable_source_path": "/vllm-workspace/vllm",
+          "source_changes": {
+            "modified": [
+              "vllm/v1/core/sched/scheduler.py"
+            ],
+            "untracked": [
+              "vllm/v1/core/sched/scheduler.py.utility-victim.bak"
+            ]
+          },
+          "source_note": "HEAD is the base revision, not the complete deployed source identity. scheduler.py has local changes; its observed hash is recorded under host_patch. Diff and backup hash have not been supplied."
+        },
+        "backend": {
+          "name": "vllm-ascend",
+          "version": "0.23.0.post1",
+          "commit": "1cdb8c4db6e50f36f1fb3283b3e3dd618f6821e8",
+          "source_dirty": false,
+          "editable_source_path": "/vllm-workspace/vllm-ascend",
+          "source_changes": {
+            "modified": [],
+            "untracked": []
+          },
+          "source_note": "User-provided git status --short output was empty at collection time."
+        },
+        "mod": {
+          "name": "vllm-hust-utility-victim",
+          "version": "0.1.0.dev2",
+          "extension_id": "org.vllm-hust.utility-victim",
+          "backend": "core-contract-v1",
+          "commit": null,
+          "installed_artifact_sha256": null,
+          "extension_manager_state": "enabled",
+          "public_repository": null,
+          "enabled_by_campaign": true
+        },
+        "host_patch": {
+          "required": true,
+          "contract": "hust_victim_selector_api_version=1 (local contract, not upstream API)",
+          "applied_in_current_runtime": null,
+          "patch_sha256": null,
+          "installed_scheduler_sha256": "09d5813b77dccac854c013c2e913ea8f5d2484bd5f1f6d0a421e4908d0d0ea6a",
+          "note": "Current scheduler hash, modified status and untracked utility-victim backup were supplied. They identify the observed file but do not independently verify that the required patch is correctly applied; application receipt and diff remain pending.",
+          "installed_scheduler_path": "/vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py",
+          "scheduler_backup_present": true
+        },
+        "model": {
+          "name": "Qwen3.5-35B-A3B",
+          "served_model_name": "qwen3.5-35b-a3b",
+          "path": "/models/Qwen3.5-35B-A3B",
+          "revision": null,
+          "weights_manifest_sha256": null,
+          "path_source": "User-provided MODEL_PATH and readlink -f output; both match. No model revision is encoded in the resolved directory.",
+          "resolved_path": "/models/Qwen3.5-35B-A3B"
+        },
+        "precision": {
+          "dtype": "bfloat16",
+          "kv_cache_dtype": "auto",
+          "effective_kv_cache_dtype": null,
+          "quantization": null,
+          "status": "declared launch settings; effective KV dtype requires runtime confirmation"
+        },
+        "tokenizer": {
+          "path": "/models/Qwen3.5-35B-A3B",
+          "fingerprint": "319f580a2fc8d2ff1e1f48a26ea0c29eea35798d747e7188ca584e92c014bdf9",
+          "transformers": "5.18.0",
+          "enable_thinking": true,
+          "current_server_identity_verified": false,
+          "provenance": "Fingerprint remains sourced from retained off-m65-c16-r1 config with the same prepared workload hash. Current benchmark-venv Transformers 5.18.0 is confirmed by the user. Running-server tokenizer content identity is still not freshly verified."
+        },
+        "hardware": {
+          "chip_model": "Ascend 910B2",
+          "accelerator_count": 2,
+          "allocation_status": "planned two-chip deployment; hardware snapshot shows two visible devices",
+          "observed_physical_npu_ids": [
+            2,
+            3
+          ],
+          "hbm_mb_per_chip_reported": 65536,
+          "npu_smi_version": "26.0.rc1",
+          "ascend_rt_visible_devices": null,
+          "note": "ASCEND_RT_VISIBLE_DEVICES was unset in the inspected shell. This does not establish effective runtime logical indices or rank-to-device mapping. Physical IDs 2/3 are from hardware.txt. npu-smi version is not the CANN version.",
+          "ascend_rt_visible_devices_state": "unset",
+          "device_environment_source": "User-provided shell printf at collection time; not an inspection of an already-running server process."
+        },
+        "runtime": {
+          "cann_version": null,
+          "torch_version": "2.10.0+cpu",
+          "torch_npu_version": "2.10.0.post4",
+          "extension_manager_version": "0.2.0.dev0",
+          "current_server_config_verified": false,
+          "version_source": "User-provided serving-environment python -m pip show output"
+        },
+        "server_parameters": {
+          "host": "127.0.0.1",
+          "port": 18180,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "data_parallel_size": 1,
+          "enable_expert_parallel": true,
+          "max_model_len": 262144,
+          "gpu_memory_utilization": 0.65,
+          "max_num_seqs": 16,
+          "max_num_batched_tokens": 8192,
+          "block_size": 128,
+          "enable_prefix_caching": false,
+          "enable_chunked_prefill": true,
+          "enforce_eager": false,
+          "async_scheduling": false,
+          "seed": 0,
+          "scheduling_policy": "fcfs",
+          "distributed_executor_backend": "mp",
+          "disable_custom_all_reduce": true,
+          "trust_remote_code": false,
+          "load_format": "auto",
+          "enable_log_requests": false,
+          "uvicorn_log_level": "info",
+          "compilation_config": {
+            "mode": 3,
+            "cudagraph_mode": "FULL_DECODE_ONLY"
+          },
+          "cudagraph_capture_sizes": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "mtp_draft_tokens": 0,
+          "source": "Copied start_swe_ab.sh plus explicit campaign KV_MEMORY_FRACTION=0.65; these are declared settings, not a fresh observed server config"
+        },
+        "environment": {
+          "KV_MEMORY_FRACTION": "0.65",
+          "VLLM_HUST_UTILITY_VICTIM_ENABLE": "1",
+          "VLLM_HUST_UTILITY_VICTIM_BACKEND": "core-contract-v1",
+          "VLLM_HUST_UTILITY_VICTIM_EVIDENCE": "1",
+          "VLLM_ASCEND_BALANCE_SCHEDULING": "0",
+          "VLLM_HUST_UTILITY_VICTIM_KILL_SWITCH": "0"
+        },
+        "workload": {
+          "prepared_file": "prepared/qwen35.json",
+          "prepared_sha256": "4e62e54ef47497fd916a6c2906b220b3af400f87873ea0784740fed3f61e78c8",
+          "source_revision": null,
+          "note": "Current SHA256 receipt is present; prepared file bytes were not included in this evidence directory."
+        },
+        "benchmark": {
+          "tool": "swe-prefix-reuse",
+          "version": "0.1.2",
+          "commit": "6861242dbd9f17b707003191e4200b7752911d7c",
+          "historical_tool_version_for_same_workload": "0.1.2",
+          "measurement_seconds": 900,
+          "concurrency_levels": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "session_rotation_depth": 1,
+          "seed": 0,
+          "chips": 2,
+          "protocol_probe_seconds": 20,
+          "protocol_probe_status": "planned; record each actual probe separately",
+          "note": "Per-run C, run ID, timing and result metrics are generated in config.json/summary.json. These files declare the campaign, not measured outcomes.",
+          "source_dirty": true,
+          "source_changes": {
+            "modified": [
+              ".agents/skills/repo-knowledge/CATALOG.md",
+              ".agents/skills/repo-knowledge/SKILL.md",
+              ".agents/skills/repo-knowledge/agents/openai.yaml",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/GUIDE.md",
+              ".agents/skills/repo-knowledge/scenarios/grow-repo-knowledge/validate",
+              ".agents/skills/repo-knowledge/scenarios/qualify-token-continuation/GUIDE.md",
+              ".github/workflows/tests.yml",
+              ".gitignore",
+              "AGENTS.md",
+              "LICENSE",
+              "MANIFEST.in",
+              "NOTICE",
+              "README.md",
+              "data/LICENSE-CC-BY-4.0.txt",
+              "data/README.md",
+              "docs/UPSTREAM.md",
+              "pyproject.toml",
+              "scripts/bundle_traces.py",
+              "src/swe_prefix_reuse/__init__.py",
+              "src/swe_prefix_reuse/cli.py",
+              "src/swe_prefix_reuse/client.py",
+              "src/swe_prefix_reuse/prepare.py",
+              "src/swe_prefix_reuse/runner.py",
+              "tests/test_client.py",
+              "tests/test_prepare.py",
+              "tests/test_runner.py"
+            ],
+            "untracked": [
+              ".venv-bench/",
+              "evidence/"
+            ]
+          },
+          "editable_source_path": "/root/workspace/swe-prefix-reuse",
+          "python_executable": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/python",
+          "transformers_version": "5.18.0",
+          "source_note": "Editable install points to the dirty checkout. Modified paths include client.py, prepare.py and runner.py, so HEAD alone does not identify the measured client. Diff/content hashes are required; changes must not be assumed to be only line endings.",
+          "version_source": "User-provided benchmark-venv pip show, git rev-parse HEAD and git status --short"
+        },
+        "launch": {
+          "script": "start_swe_ab.sh",
+          "script_sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7",
+          "script_default_gpu_memory_utilization": 0.85,
+          "required_override": "KV_MEMORY_FRACTION=0.65",
+          "model_path_requires_confirmation": false,
+          "server_command": "vllm-hust-ext run -- vllm serve /models/Qwen3.5-35B-A3B --served-model-name qwen3.5-35b-a3b --host 127.0.0.1 --port 18180 --dtype bfloat16 --kv-cache-dtype auto --block-size 128 --tensor-parallel-size 2 --enable-expert-parallel --pipeline-parallel-size 1 --data-parallel-size 1 --max-model-len 262144 --gpu-memory-utilization 0.65 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --enable-chunked-prefill --no-enforce-eager --no-async-scheduling --seed 0 --scheduling-policy fcfs --distributed-executor-backend mp --disable-custom-all-reduce --no-trust-remote-code --load-format auto --no-enable-log-requests --uvicorn-log-level info --compilation-config '{\"mode\":3,\"cudagraph_mode\":\"FULL_DECODE_ONLY\"}' --cudagraph-capture-sizes 1 2 4 8 16",
+          "invocation": "KV_MEMORY_FRACTION=0.65 bash \"$MOD/scripts/start_swe_ab.sh\" on \"$MODEL_PATH\""
+        },
+        "observed_activation": {
+          "patch_installed_events": null,
+          "runtime_effective_events": null,
+          "note": "Populate only from the new run server log. Prior C16 counts must not be reused."
+        },
+        "evidence_files": [
+          {
+            "path": "extensions.txt",
+            "sha256": "00d58b98984379ce24b8c230bef5c5f19b0b1e58a5b1aacbb662305cd3663648"
+          },
+          {
+            "path": "hardware.txt",
+            "sha256": "9af06301a55199dda3116aff64be8954434efe8f8fcae5ae162a2f1ec471c1ae"
+          },
+          {
+            "path": "start-script.sha256",
+            "sha256": "07fbb576d79ab81dbb01b21c4ea9f04f04609a4cdb13d8193247abc127dec854"
+          },
+          {
+            "path": "start_swe_ab.sh",
+            "sha256": "70f6db3164840d7d69659207727d3c5d955ebecdc3336024e335673db2dfdee7"
+          },
+          {
+            "path": "versions.txt",
+            "sha256": "cce3be5c9edf5bd23f009d941ce6ff87266af2baebae5b97b15cc7a08927a6b0"
+          },
+          {
+            "path": "workload.sha256",
+            "sha256": "fce1263d73942a8de6230eff82e7d82fdd57bc54aa96b7341bf6887d5441afcd"
+          }
+        ],
+        "missing_information": [
+          "Core scheduler diff and backup hash; host-patch application/compatibility receipt",
+          "Dirty benchmark checkout diff and actual source file hashes, including client/prepare/runner",
+          "Installed plugin artifact identity or source revision",
+          "Current model revision or weight identity (model path is now confirmed)",
+          "Current server tokenizer identity (benchmark Transformers version is confirmed)",
+          "Loaded CANN version",
+          "Effective runtime logical-device/rank mapping (inspected shell variable is confirmed unset)",
+          "Per-run startup/probe/log confirmation and observed activation events"
+        ],
+        "arm": "on",
+        "updated_date": "2026-10-03",
+        "supplemental_provenance": {
+          "source": "User-supplied container terminal output in this conversation",
+          "recorded_date": "2026-10-03",
+          "command_execution_timestamp": null,
+          "commands": [
+            "git -C /vllm-workspace/vllm rev-parse HEAD",
+            "git -C /vllm-workspace/vllm status --short",
+            "git -C /vllm-workspace/vllm-ascend rev-parse HEAD",
+            "git -C /vllm-workspace/vllm-ascend status --short",
+            "git -C \"$BENCH\" rev-parse HEAD",
+            "git -C \"$BENCH\" status --short",
+            "python -m pip show torch torch-npu vllm-hust-ext",
+            "\"$BENCH/.venv-bench/bin/python\" -m pip show swe-prefix-reuse transformers",
+            "printf MODEL_PATH; readlink -f \"$MODEL_PATH\"",
+            "printf ASCEND_RT_VISIBLE_DEVICES",
+            "sha256sum /vllm-workspace/vllm/vllm/v1/core/sched/scheduler.py"
+          ],
+          "verification_scope": "Transcribed supplied observations; not independently executed against the container. Existing evidence_files hashes remain hashes of the original local files."
+        }
+      }
+    },
+    "ttft_p50_ms": 1377.1104938350618,
+    "tpot_mean_ms": 95.54783752938495,
+    "tpot_p95_ms": 276.225097063596,
+    "e2e_p95_ms": 117480.76437716372,
+    "deltas": {
+      "vllm:num_preemptions_total": 191.0,
+      "vllm:request_success_total": 312.0,
+      "vllm:prompt_tokens_total": 4254238.0,
+      "vllm:generation_tokens_total": 161695.0,
+      "process_start_time_seconds": 0.0
+    },
+    "counter_checks": {
+      "success_count_matches": true,
+      "input_count_matches": true,
+      "output_count_matches": true
+    },
+    "runtime_events": [
+      {
+        "actual_kv_freed_verified": false,
+        "mechanism": "ascend-utility-victim",
+        "scope": "victim_selection_only",
+        "selection_changed": true,
+        "tokens_proxy": 41302
+      }
+    ],
+    "installed_events": 4,
+    "probe_valid": true,
+    "probe_seconds": 20.0,
+    "exit_code": "0",
+    "requests_sha256": "0848267caa553a920f5be01e7280d519678b751d8f54e6ece8689c965766e9b2"
+  }
+]
